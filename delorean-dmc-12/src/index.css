@@ -1,1 +1,98 @@
-/* TODO */
+.header .caption {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  border-bottom: 5px solid #DADCE0;
+  margin-bottom: 1rem;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+
+  position: relative;
+
+  grid-column-gap: 16px;
+  grid-row-gap: 8px;
+}
+
+.text-column {
+  position: relative;
+}
+
+.text-column:after,
+.text-column:before {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  content: '';
+  width: 0;
+}
+
+.text-column:before {
+  left: calc(-8px - 3px/2);
+  border-right: 3px solid #DADCE0;
+}
+
+.text-column:after {
+  right: calc(-8px + -3px/2);
+  border-left: 3px solid #DADCE0;
+}
+
+.text-column .caption {
+  font-family: 'Oswald', sans-serif;
+}
+
+.columns .text-column .paragraph:first-of-type:first-letter {
+  font-size: 2.5rem;
+  color: red;
+}
+
+.quotation {
+  font-family: 'Montserrat Alternates', sans-serif;
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid #DADCE0;
+}
+
+.quotation:before {
+  content: "«";
+}
+
+.quotation:after {
+  content: "»";
+}
+
+.text-column.vertical .paragraph {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
+  margin-left: 0;
+  font-size: 2rem;
+
+}
+
+.columns .img-block {
+  grid-column: span 3;
+}
+
+.img-block .image {
+  width: 100%;
+  height: auto;
+}
+
+.img-block .description {
+  color: rgb(75, 75, 75);
+}
+
+.text-column.vertical .paragraph,
+.img-block .description {
+  font-family: 'Play', sans-serif;
+}
+
+.text-column,
+.img-block .description {
+  word-break: break-all;
+  hyphens: auto;
+}
+
