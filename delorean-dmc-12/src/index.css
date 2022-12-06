@@ -23,6 +23,10 @@
   src: url('res/fonts/GulagDecay.ttf');
 }
 
+.setting-header {
+  font-weight: bold;
+}
+
 .v {
   text-decoration: underline;
 }
@@ -118,6 +122,7 @@
 
   font-family: Font1, sans-serif;
   font-size: 50px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -223,6 +228,7 @@
   background-color: lightgray;
   font-family: Font1, sans-serif;
   font-size: 50px;
+  font-weight: bold;
   text-align: center;
 }
 
