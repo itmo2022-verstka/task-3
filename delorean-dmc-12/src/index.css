@@ -1,1 +1,345 @@
-/* TODO */
+body {
+    background-color: rgba(170,151,53,0.45);
+}
+
+@font-face {
+    font-family: 'Font1';
+    src: url('font/font1.ttf');
+}
+
+@font-face {
+    font-family: 'Font2';
+    src: url('font/font2.ttf');
+}
+
+@font-face {
+    font-family: 'Font3';
+    src: url('font/font3.ttf');
+}
+
+@font-face {
+    font-family: 'Font4';
+    src: url('font/font4.ttf');
+}
+
+.v {
+    text-decoration: underline;
+}
+
+
+.bold {
+    font-weight: bolder;
+}
+
+
+.italic {
+    font-style: italic;
+}
+
+.articles {
+    padding: 10px;
+}
+
+.text::first-letter {
+    font-size: 20px;
+}
+
+.magazine {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+    'header header header header header'
+    'art_1 art_1 art_2 art_2 art_2'
+    'art_1 art_1 art_2 art_2 art_2'
+    'art_3 art_3 art_5 art_5 art_5'
+    'art_3 art_3 art_5 art_5 art_5'
+    'art_4 art_4 art_5 art_5 art_5'
+    'art_4 art_4 art_5 art_5 art_5';
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    padding: 20px;
+
+    hyphens: auto;
+}
+
+#header {
+    grid-area: header;
+
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+    'title title title title info';
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    font-family: Font2, serif;
+}
+
+#title {
+    grid-area: title;
+
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+    '. head head head'
+    'sub_1 sub_2 sub_2 sub_2';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    background-color: rgba(170,151,53,0.45);
+    border: 2px solid gray;
+}
+
+#head {
+    grid-area: head;
+    font-size: 120px;
+    text-align: center;
+}
+
+#sub_1 {
+    grid-area: sub_1;
+    font-size: 14px;
+    font-family: Font3, serif;
+}
+
+#sub_2 {
+    grid-area: sub_2;
+    font-size: 45px;
+    text-align: center;
+}
+
+#info {
+    grid-area: info;
+
+    font-size: 10px;
+    text-align: justify;
+
+    font-family: Font1, serif;
+    background-color: rgba(170,151,53,0.66);
+    border: 2px solid gray;
+}
+
+#info h1 {
+    font-size: 15px;
+    text-align: justify;
+}
+
+/*======================================    1     =========================================*/
+
+#art_1 {
+    display: grid;
+    align-content: stretch;
+    grid-area: art_1;
+    grid-gap: 1rem;
+    grid-template-areas:
+    'img_1 img_1'
+    'img_1 img_1'
+    'txt_1 txt_1';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    border: 2px solid black;
+    background-color: rgba(170,151,53,0.66);
+}
+
+#img_1 {
+    grid-area: img_1;
+
+    width: 100%;
+}
+
+#txt_1 {
+    grid-area: txt_1;
+
+    column-count: 2;
+    font-size: 10px;
+    text-align: justify;
+
+    font-family: Font1, sans-serif;
+}
+
+/*======================================    2     =========================================*/
+#art_2 {
+    display: grid;
+    grid-area: art_2;
+    grid-gap: 1rem;
+    grid-template-areas:
+    'head_2 head_2 head_2 head_2'
+    'txt_2_1 txt_2_1 img_2 img_2'
+    'txt_2_2 txt_2_2 img_2 img_2'
+    'txt_2_2 txt_2_2 img_2 img_2';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    border: 2px solid black;
+
+    font-family: Font, sans-serif;
+    background-color: rgba(170,151,53,0.47);
+}
+
+#head_2 {
+    grid-area: head_2;
+    font-size: 40px;
+
+    font-family: Font3, sans-serif;
+    text-align: center;
+}
+
+#img_2 {
+    grid-area: img_2;
+
+    width: 100%;
+}
+
+#txt_2_1 {
+    grid-area: txt_2_1;
+
+    column-count: 1;
+    font-size: 12px;
+    text-align: justify;
+    font-family: Font4, sans-serif;
+}
+
+#txt_2_2 {
+    grid-area: txt_2_2;
+
+    column-count: 1;
+    font-size: 9px;
+    text-align: justify;
+}
+
+/*======================================    3     =========================================*/
+
+
+#art_3 {
+    display: grid;
+    grid-area: art_3;
+    grid-gap: 1rem;
+    grid-template-areas:
+    'head_3 head_3 head_3'
+    'txt_3_1 txt_3_1 txt_3_1'
+    'txt_3_2 txt_3_2 txt_3_2'
+    'txt_3_2 txt_3_2 txt_3_2';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    border: 2px solid black;
+    background-color: rgba(170,151,53,0.31);
+}
+
+#head_3 {
+    grid-area: head_3;
+    font-size: 40px;
+
+    font-family: Font3, sans-serif;
+}
+
+#txt_3_1 {
+    grid-area: txt_3_1;
+
+    column-count: 1;
+    font-size: 15px;
+    text-align: justify;
+}
+
+#txt_3_2 {
+    grid-area: txt_3_2;
+
+    column-count: 3;
+    font-size: 10px;
+    text-align: justify;
+}
+
+/*======================================    4     =========================================*/
+
+#art_4 {
+    display: grid;
+    grid-area: art_4;
+    grid-gap: 1rem;
+    grid-template-areas:
+    'txt_4_1 head_4 head_4'
+    'txt_4_2 txt_4_2 txt_4_2';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    border: 2px solid black;
+
+    font-family: Font, sans-serif;
+    background-color: rgba(170,151,53,0.42);
+}
+
+#head_4 {
+    grid-area: head_4;
+    font-size: 55px;
+    text-align: center;
+
+    font-family: Font4, sans-serif;
+}
+
+#txt_4_1 {
+    grid-area: txt_4_1;
+
+    column-count: 1;
+    font-size: 15px;
+    text-align: justify;
+}
+
+#txt_4_2 {
+    grid-area: txt_4_2;
+
+    column-count: 3;
+    font-size: 10px;
+    text-align: justify;
+}
+
+/*======================================    5     =========================================*/
+
+#art_5 {
+    display: grid;
+    grid-area: art_5;
+    grid-gap: 1rem;
+    grid-template-areas:
+    'head_5 head_5'
+    'txt_5_1 txt_5_1'
+    'txt_5_2 txt_5_2'
+    'img_5 img_5';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    border: 2px solid black;
+
+    font-family: Font, sans-serif;
+    background-color: rgba(170,151,53,0.23);
+}
+
+#head_5 {
+    grid-area: head_5;
+    font-size: 100px;
+
+    font-family: Font2, sans-serif;
+
+    text-align: center;
+}
+
+#img_5 {
+    grid-area: img_5;
+
+    width: 100%;
+}
+
+#txt_5_1 {
+    grid-area: txt_5_1;
+
+    column-count: 1;
+    font-size: 13px;
+    text-align: justify;
+}
+
+#txt_5_2 {
+    grid-area: txt_5_2;
+
+    column-count: 5;
+    font-size: 9px;
+    text-align: justify;
+}
