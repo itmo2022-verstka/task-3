@@ -302,7 +302,7 @@ article :first-child:first-letter,
 }
 
 .small {
-  right: 25px;
+  right: 26px;
 }
 
 .normal {
@@ -310,7 +310,7 @@ article :first-child:first-letter,
 }
 
 .black {
-  right: 40px;
+  right: 43px;
 }
 
 #big:checked ~ .frontpage {
