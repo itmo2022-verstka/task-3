@@ -1,1 +1,264 @@
-/* TODO */
+@font-face {
+	font-family: "a_CopperGothCpsExp";
+	src: url("a-coppergothcpsexp.woff") format("woff");
+}
+
+@font-face {
+	font-family: "League Gothic";
+	src: url("league-gothic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Franklin Gothic Demi";
+	src: url("franklin-gothic-demi.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Cyrillic Goth";
+	src: url("cyrillicgoth.woff") format("woff");
+}
+
+@font-face {
+	font-family: "RoslynGothicMedium_DG Medium";
+	src: url("roslyngothicmedium-dg-medium.woff") format("woff");
+}
+
+
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+main {
+	margin-top: 100px;
+	background-color: rgba(221,207,197, 0.7);
+	padding-top: 15px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-top: double 7px;
+	border-bottom: double 7px;
+	margin-bottom: 15px;
+}
+
+.emblem {
+	display: block;
+	margin: 10px;
+	margin-top: 30px;
+	height: 100px;
+	width: auto;
+	object-fit: cover;
+}
+
+.emblem-field-neg {
+	display: none;
+}
+
+.emblem-field,
+.name,
+.main-info {
+	display: block;
+}
+
+.name {
+	font-size: 50px;
+	font-family: a_CopperGothCpsExp;
+}
+
+.main-style {
+	display: none;
+}
+
+.date {
+	font-family: a_CopperGothCpsExp;
+	line-height: 25px;
+	font-size: 1.1em;
+}
+
+.change-f,
+.change-s,
+.change-t {
+	font-family: Franklin Gothic Demi;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	line-height: 30px;
+}
+
+.change-t:hover,
+.change-s:hover,
+.change-f:hover {
+	cursor: pointer;
+}
+
+.main-info {
+	margin-top: 15px;
+}
+
+.intro {
+	column-count: 4;
+}
+
+.summary {
+	font-size: 24px;
+	font-family: League Gothic;
+}
+	
+.summary,
+.main-part-text {
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: justify; 
+	hyphens: manual;
+}
+
+.quotation {
+	font-family: Franklin Gothic Demi;
+	font-size: 16px;
+}
+
+.facts {
+	border: double 4px;
+	padding: 0px;
+	font-family: RoslynGothicMedium_DG Medium;
+	font-size: 20px;
+	text-align: left;
+	margin-left: 40px;
+	margin-top: 50px;
+	width: 82%;
+	display: flex;
+	justify-content: baseline;
+}
+
+/*.facts:first-line {
+	font-size: 1.2em;
+}*/
+
+.facts-vertical {
+	font-size: 1.5em;       
+	font-weight: bold;
+	text-align: center;
+	writing-mode: vertical-lr;
+    text-orientation: upright;
+	padding: 4px;
+	margin: 0px;
+}
+
+.facts-bull {
+	font-weight: thin;
+	padding: 0px;
+	padding-left: 20px;
+	margin: 0px;
+}
+
+.main-part-text {
+	font-size: 20px;
+	font-family: serif;
+}
+
+
+.main-part-text {
+	column-count: 1;
+}
+
+.summary:first-letter,
+.main-part-text:first-letter {
+	font-family: Cyrillic Goth;
+	font-size: 45px;
+}
+
+h3 {
+	column-span: all;
+	text-align: center;
+	font-family: serif;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-top: 50px;
+	margin-bottom: 0px;
+}
+
+.text {
+	display: block;
+}
+
+.image {
+	margin-top: 50px;
+	display: block;
+	text-align: center;
+}
+
+.image-in-text {
+	width: 480px;
+	height: auto;
+}
+
+.image-description {
+	margin-left: 40px;
+	font-family: Verdana;
+	text-align: left;
+	font-size: 14px;
+}
+
+.main-text {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+}
+
+#dark-theme:checked ~ main {
+	background-color: #373737;
+	color: #F4F4F4;
+}
+
+#dark-theme:checked ~ main .header .emblem-field {
+	display: none;
+}
+
+#dark-theme:checked ~ main .header .emblem-field-neg {
+	display: block;
+}
+
+#change-font:checked ~ main .intro .summary {
+	font-family: serif;
+	font-size: 20px;
+}
+
+#change-font:checked ~ main .main-text .text .main-part-text {
+	font-family: Arial;
+}
+
+#change-font:checked ~ main .image .image-description {
+	font-family: sans-serif;
+}
+
+#change-font:checked ~ main .main-text .text blockquote .quotation {
+	font-family: Arial;
+}
+
+#change-font:checked ~ main .image .facts {
+	font-family: sans-serif;
+}
+
+#change-big:checked ~ main .intro .summary {
+	font-size: 27px;
+}
+
+#change-big:checked ~ main .main-text .text .main-part-text {
+	font-size: 22px;
+}
+
+#change-big:checked ~ main .image .image-description {
+	font-size: 18px;
+}
+
+#change-big:checked ~ main .image .facts {
+	font-size: 22px;
+}
+
+#change-big:checked ~ main .main-text .text blockquote .quotation {
+	font-size: 19px;
+}
