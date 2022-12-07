@@ -1,1 +1,341 @@
-/* TODO */
+:root {
+  --font-const: 1;
+
+  --vintage-color: #E8DCB8;
+  --article-color: #efefef;
+  --text-color: black;
+  --bright-color: chartreuse;
+  --border-style: 1px solid goldenrod;
+
+  --font-1: "Vivaldi", serif;
+  --font-2: "Bauhaus 93", serif;
+  --font-3: Algerian, serif;
+  --font-4: "Comic Sans MS", serif;
+  --font-5: Broadway, serif;
+  --font-6: "Baskerville Old Face", serif;
+  --font-7: "Bernard MT Condensed", serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  background-color: var(--vintage-color);
+  background-clip: content-box;
+  font-size: calc(1rem * var(--font-const));
+  color: var(--text-color);
+}
+
+body {
+  margin: -21px 0 0 0;
+}
+
+.frontpage {
+  padding: 5px;
+  background-clip: border-box;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.2fr 1fr 0.5fr 1.5fr 0.5fr 1.5fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 8px;
+  border: 1px solid transparent;
+  border-top: var(--border-style);
+  border-bottom: var(--border-style);
+  overflow: hidden;
+}
+
+.fp-item {
+  background-clip: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  height: 100%;
+  width: 100%;
+  text-align: justify;
+  object-fit: cover;
+}
+
+.fp-item,
+article,
+p {
+  background-color: var(--article-color);
+}
+
+.fp-cell {
+  position: relative;
+  z-index: 2;
+  padding: 8px 0;
+  background-color: #fff;
+}
+
+.fp-cell--border-top:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  right: -8px;
+  border-top: var(--border-style);
+}
+
+article {
+  display: block;
+  padding: 5px;
+}
+
+article b {
+  display: contents;
+}
+
+article p {
+  margin-top: 0;
+}
+
+article :first-child:first-letter,
+.f-l { /* not all browsers support :first-letter*/
+  font-size: 130%;
+  font-weight: bold;
+  color: brown;
+}
+
+.fp-cell--Title {
+  grid-column: 1 / span 8;
+  border-bottom: 1px solid goldenrod;
+}
+
+.fp-cell--Title .fp-item {
+  background-color: var(--vintage-color);
+  background-image: url("header-border.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100px;
+  min-width: 180px;
+  z-index: 5;
+  color: black;
+}
+
+.fp-cell--Title .fp-item {
+  font-family: var(--font-1);
+  font-weight: bold;
+  font-size: 200%;
+  text-align: center;
+  min-height: calc(120px  * var(--font-const));
+}
+
+.fp-cell--TimeMachine {
+  grid-row: 2 / span 4;
+  padding: 10px;
+  background-clip: border-box;
+  background-color: var(--article-color);
+  border: 4px solid blueviolet;
+  font-family: var(--font-5);
+  font-size: 150%;
+  writing-mode: vertical-rl;
+}
+
+.fp-cell--TimeMachine .fp-item {
+  font-size: 100%;
+}
+
+.fp-cell--Breaking {
+  grid-column: 2 / span 3;
+  grid-row: 2;
+}
+
+.fp-cell--Breaking .fp-item,
+.fp-cell--Kansas .fp-item {
+  min-height: 50px;
+  font-style: italic;
+  font-size: 200%;
+}
+
+.fp-cell--Breaking .fp-item {
+  font-family: var(--font-2);
+}
+
+.fp-cell--Kansas .fp-item {
+  font-family: var(--font-3);
+}
+
+.fp-cell--Kansas {
+  grid-column: span 4;
+}
+
+.fp-cell--KansasImg {
+  grid-column: 5 / span 4;
+  grid-row: span 2;
+}
+
+.fp-cell--Biff {
+  grid-column: 2 / span 2;
+  grid-row: 3;
+  min-width: 280px;
+}
+
+.fp-cell--Biff .fp-item {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.fp-cell--BiffText {
+  grid-column: 4;
+  grid-row: 3;
+  padding-bottom: 0;
+  margin-bottom: -8px;
+}
+
+.fp-cell--BiffText .fp-item article b,
+.fp-cell--BiffText .fp-item article p,
+.fp-cell--BiffContinue .fp-item article p{
+  font-family: var(--font-4);
+  font-size: 150%;
+}
+
+.fp-cell--BootsHeader {
+  grid-row: 6;
+}
+
+.fp-cell--Boots {
+  grid-row: 7;
+}
+
+.fp-cell--BootsHeader,
+.fp-cell--Boots,
+.fp-cell--15 {
+  grid-column: 1 / span 2;
+}
+
+.fp-cell--BiffContinue {
+  padding-top: 0;
+  grid-column: 2 / span 3;
+  grid-row: span 2;
+}
+
+.fp-cell--Young,
+.fp-cell--Cueto {
+  grid-column: span 2;
+}
+
+.fp-cell--YoungSub,
+.fp-cell--YoungQuote,
+.fp-cell--CuetoSub,
+.fp-cell--CuetoQuote {
+  grid-row: 6 / span 3;
+}
+
+.fp-cell--YoungSub .fp-item,
+.fp-cell--CuetoSub .fp-item {
+  font-family: var(--font-6);
+  font-size: 150%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.quote::before,
+.quote::after {
+  background-color: inherit;
+  content: "\"";
+}
+
+.quote {
+  font-style: oblique;
+}
+
+.fp-cell--Boots {
+  grid-row: span 2;
+}
+
+.fp-cell--BootsImg {
+  grid-column: 3 / span 2;
+  grid-row: 6 / span 3;
+}
+
+.fp-cell--BootsHeader .fp-item{
+  background-color: var(--bright-color);
+  font-size: 150%;
+}
+
+.fp-cell--Boots .fp-item{
+}
+
+.fp-cell--BootsHeader .fp-item,
+.fp-cell--Boots .fp-item {
+  font-family: var(--font-7);
+}
+
+.small,
+.big,
+.normal,
+.simple,
+.black,
+.white {
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+  border: 2px solid gray;
+  border-radius: 2px;
+  background-color: white;
+  background-clip: border-box;
+  padding: 1px;
+}
+
+.big,
+.small {
+  top: 7px;
+}
+
+.normal,
+.simple {
+  top: 30px;
+}
+
+.black,
+.white {
+  top: 53px;
+}
+
+.big,
+.simple,
+.white {
+  right: 0;
+}
+
+.small {
+  right: 25px;
+}
+
+.normal {
+  right: 50px;
+}
+
+.black {
+  right: 40px;
+}
+
+#big:checked ~ .frontpage {
+  --font-const: 1.5;
+}
+
+#simple:checked ~ .frontpage {
+  --font-1: "Times New Roman";
+  --font-2: "Times New Roman";
+  --font-3: "Times New Roman";
+  --font-4: "Times New Roman";
+  --font-5: "Times New Roman";
+  --font-6: "Times New Roman";
+  --font-7: "Times New Roman";
+}
+
+#white:checked ~ .frontpage {
+  --article-color: black;
+  --text-color: #efefef;
+  --vintage-color: #D7C0AE;
+  --bright-color: green;
+}
+
+.font-size-change,
+.font-family-change,
+.color-change {
+  visibility: hidden;
+}
