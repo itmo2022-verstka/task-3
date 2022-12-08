@@ -1,1 +1,245 @@
-/* TODO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+.body {
+  height: 100%;
+  background-color: #ddcfc5;
+}
+
+.main {
+  display: flex;
+  flex-wrap: nowrap;
+  top: 30px;
+  width: 100%;
+  font-size: 30px;
+  transition: font-size 0.5s ease;
+}
+
+.header {
+  top: 0;
+  width: 100%;
+  font-size: 2vw;
+  border-bottom: 0.5vw dashed black;
+}
+
+.header-text {
+  display: flex;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  font-size: 3.5vw;
+  border-bottom: 0.5vw dashed;
+}
+
+.menu-input {
+  display: none;
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.menu {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1vw 0 1vw 0;
+}
+
+.menu-label {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.menu-label:hover {
+  color: red;
+  transition: 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  grid-column-end: span 4;
+  width: 100%;
+  font-size: 1vw;
+  border-top: 0.1vw solid;
+  margin: 0 -1.5vw 0 -10px;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-row-gap: 1vw;
+  grid-column-gap: 1vw;
+  grid-template-columns: repeat(4, 1fr) auto;
+  margin-left: 1.5vw;
+  margin-top: 1vw;
+}
+
+.main-wrapper--text:first-letter {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.main-wrapper--content {
+  display: grid;
+  margin: 1vw 1vw 0 0;
+  border-top: 0.25vw solid;
+  border-bottom: 0.25vw solid;
+  border-right: 0.25vw dashed;
+  border-left: 0.25vw dashed;
+}
+
+.main-wrapper--title {
+  border-bottom: 1px solid;
+  margin: 0.4vw 0 0.4vw 0;
+  padding-left: 0.4vw;
+}
+
+.main-wrapper--text {
+  margin: 0.4vw 0.4vw 0.4vw 0.4vw;
+  text-align: justify;
+}
+
+.main-wrapper-left {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.main-wrapper-right {
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
+
+.main-wrapper-mid {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  margin-top: 10px;
+}
+
+.main-wrapper-mid-image {
+  width: 100%;
+  height: auto;
+}
+
+.text-article {
+  column-count: 2;
+}
+
+.img-header {
+  display: flex;
+  justify-content: right;
+  border-bottom: 1px solid;
+  font-weight: bold;
+  font-size: 170%;
+  font-style: oblique;
+  text-transform: uppercase;
+  font-family: "Georgia", sans-serif;
+}
+
+.main-quote {
+  border-top: 0.25vw dotted;
+  border-bottom: 0.25vw dotted;
+  padding: 0.5vw 0 0.5vw 0.5vw;
+  font-style: italic;
+  border-left: 0.8vw solid;
+  text-align: justify;
+}
+
+.main-vertical {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  border-bottom: none;
+  grid-area: vrhead;
+  display: block;
+  font-size: 300%;
+}
+
+.main-wrapper-mid-article {
+  grid-area: article;
+}
+
+.mid-area {
+  display: grid;
+  grid-template-columns: auto 2fr;
+  grid-template-areas:
+    "vrhead article"
+    "vrhead article";
+}
+
+.font-size-small {
+  font-size: 75%
+}
+
+.font-size-mid {
+  font-size: 100%
+}
+
+.font-size-large {
+  font-size: 125%
+}
+
+.font-1 {
+  font-family: 'Times New Roman', serif;
+}
+
+.font-2 {
+  font-family: 'Verdana', sans-serif;
+}
+
+.main-wrapper--title {
+  font-size: 150%;
+  text-align: center;
+  font-weight: bold;
+}
+
+#font-size-small:checked ~ .main {
+  font-size: 0.7vw;
+}
+
+#font-size-mid:checked ~ .main {
+  font-size: 1.0vw;
+}
+
+#font-size-large:checked ~ .main {
+  font-size: 1.3vw;
+}
+
+#font-style-1:checked ~ .header,
+#font-style-1:checked ~ .main {
+  font-family: 'Times New Roman', serif;
+}
+
+#font-style-2:checked ~ .header,
+#font-style-2:checked ~ .main {
+  font-family: 'Verdana', sans-serif;
+}
+
+#dark ~ .header,
+#dark ~ .main > .header > .header-text,
+#dark ~ .menu,
+#dark ~ .main,
+#dark ~ .main > .main-wrapper > .main-header {
+  transition: 0.4s ease-in-out;
+}
+
+#dark:checked ~ .header,
+#dark:checked ~ .main > .header > .header-text,
+#dark:checked ~ .menu,
+#dark:checked ~ .main,
+#dark:checked ~ .main > .main-wrapper > .main-header {
+  transition: 0.4s ease-in-out;
+  border-color: white;
+  background-color: black;
+  color: white;
+}
