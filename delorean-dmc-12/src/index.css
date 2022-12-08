@@ -1,1 +1,180 @@
-/* TODO */
+@font-face {
+  font-family: Custom Title Font;
+  src: url('../../fonts/GenzschEtHeyse.ttf');
+}
+
+@font-face {
+  font-family: Custom Article Title Font;
+  src: url('../../fonts/Antonio-Light.ttf');
+}
+
+@font-face {
+  font-family: Quote Font;
+  src: url('../../fonts/Sevillana-Regular.ttf');
+}
+
+body {
+  background-image: url('../../task-img/paper1.jpg');
+  background-size: cover;
+  font-family: 'Franklin Gothic Book', sans-serif;
+}
+
+.article-title {
+  font-family: 'Custom Article Title Font', sans-serif;
+}
+
+.quote {
+  font-family: 'Quote Font', sans-serif;
+  font-size: 1.2em;
+}
+
+.quote,
+.weather {
+  padding: 0.2em;
+
+  border: 1px solid black;
+}
+
+.header {
+  align-items: center;
+
+  text-align: center;
+}
+
+.header,
+.main-content {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-gap: 0.3em;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.newspaper-title {
+  grid-column: 2 / -2;
+
+  font-family: 'Custom Title Font', fantasy;
+}
+
+.date {
+  grid-column: 1 / -1;
+
+  border-top: 4px double black;
+  border-bottom: 4px double black;
+}
+
+.begin1 {
+  grid-row-start: 1;
+}
+
+.begin2 {
+  grid-row-start: 2;
+}
+
+.begin3 {
+  grid-row-start: 3;
+}
+
+.begin4 {
+  grid-row-start: 4;
+}
+
+.width2 {
+  grid-column: span 2;
+}
+
+.height1 {
+  grid-row-end: span 1;
+}
+
+.height2 {
+  grid-row-end: span 2;
+}
+
+.height3 {
+  grid-row-end: span 3;
+}
+
+.height4 {
+  grid-row-end: span 4;
+}
+
+.height5 {
+  grid-row-end: span 5;
+}
+
+.news {
+  padding: 2px;
+
+  hyphens: auto;
+}
+
+.article-title,
+p {
+  margin: 0.3em;
+}
+
+.news > p:nth-child(2):first-letter {
+  font-weight: bold;
+}
+
+.image {
+  width: 100%;
+}
+
+.img-description {
+  color: #404040;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.option-set {
+  display: inline-block;
+
+  height: 100%;
+
+  vertical-align: top;
+}
+
+.options {
+  text-align: center;
+}
+
+#decrease:checked ~ .header,
+#decrease:checked ~ .main-content {
+  font-size: 0.8em;
+}
+
+#increase:checked ~ .header,
+#increase:checked ~ .main-content {
+  font-size: 1.3em;
+}
+
+#serif:checked ~ .header,
+#serif:checked ~ .main-content {
+  font-family: serif;
+}
+
+#sans-serif:checked ~ .header,
+#sans-serif:checked ~ .main-content {
+  font-family: sans-serif;
+}
+
+#fantasy:checked ~ .header,
+#fantasy:checked ~ .main-content {
+  font-family: fantasy;
+}
+
+#monospace:checked ~ .header,
+#monospace:checked ~ .main-content {
+  font-family: monospace;
+}
+
+#night:checked ~ .header,
+#night:checked ~ .main-content {
+  background-color: black;
+  color: bisque;
+}
+
+input {
+  display: none;
+}
