@@ -123,7 +123,7 @@ body {
   text-align: center;
 }
 
-.article h2 {
+.article .header {
   margin-bottom: 10px;
 
   font-family: 'Ultra', serif;
@@ -181,6 +181,19 @@ body {
   font-weight: 400;
 }
 
+.quote {
+  padding: 40px;
+
+  border: 5px groove firebrick;
+
+  box-shadow: 0 0 26px 3px firebrick inset;
+}
+
+.quote p {
+  font-family: cursive;
+  font-size: 20px;
+}
+
 .item4 {
   grid-area: d;
 
@@ -191,6 +204,20 @@ body {
   background-image: url('./img/cat.png');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.vertical {
+  max-height: 150px;
+
+  color: firebrick;
+
+  line-height: 80px;
+
+  text-orientation: upright;
+  text-transform: uppercase;
+  text-underline-offset: 6px;
+
+  writing-mode: vertical-lr;
 }
 
 .item5 {
