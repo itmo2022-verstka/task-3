@@ -1,0 +1,39 @@
+Taking Lichess to the Next Level
+
+Last month, we published a blog about Lichess’s charity nonprofit status. In this post, we want to dive deeper into Lichess’s history, how we’re currently set up, and our plans for the future.
+
+Between 2010 and 2016, virtually all of Lichess’s costs were covered by Lichess’s founder and main developer Thibault Duplessis. Lichess at the time was an association de fait, a basic association type that doesn’t require a formal legal structure.
+
+However, even as early as 2015 it was obvious that this wasn't sustainable, as by that point the site’s monthly operating costs had grown to thousands of dollars per month.
+
+
+Therefore, in 2016, Lichess was formally registered under French law as an association loi 1901. This type of association applies to groups with clearly defined purposes that benefit the public, similar to charities. However, it’s quite easy to form one - the total number in France is over 1.5 million!
+
+Like all French associations, Lichess has a formal charter that sets out how it works for the public benefit. Our official purpose is “to promote and encourage the teaching and practice of the game of chess and its variants” (“promouvoir et favoriser l'enseignement et la pratique du jeu d'échecs et de ses variantes”).
+
+Lichess’s association status gives us legal recognition, access to banking services, and the ability to employ staff and rent or own property. We also have to pay our fair share of employer taxes and social security contributions for our three salaried employees with permanent contracts, one of whom is Thibault. We also pay some additional team members for their work in key areas such as development, content/community, general operations and site moderation, but they are technically contractors, not employees; in total our budget covers the equivalent of around seven full-time positions.
+
+In terms of overall governance, the Lichess association currently has two trustees who are responsible for ensuring all its legal requirements are met. These are broadly similar to charity requirements in other countries. For instance, it’s important that Lichess only uses its resources to support its stated charitable purposes; no other use is permitted.
+
+The last few years have seen significant developments in how Lichess is run as an organisation. We’ve retained the services of a French accountancy firm to help us manage our finances, whereas previously we relied on internal bookkeeping. Our accountants are responsible for compiling and signing off our annual accounts, which are then reviewed by an independent auditor. While we need to do this to satisfy the requirements for a higher charity designation (explained below), it also provides important oversight and reassurance, demonstrating that everything we receive goes to support our objectives.
+
+
+Recently, we've also strengthened our internal processes by, for example, conducting internal mini-audits using reputable checklists to identify areas where we already conform with best practice but also areas where we can strive to do better. A small group within the team meets regularly to discuss financial matters, and similar groups and fora exist to discuss other important topics such as site moderation and strategy. Committees, terms of reference, agendas, minutes… Sure, it all may sound rather boring and dare we say “corporate”, but good governance isn’t just essential to our future, it also serves the best interests of our users, and so we need to do things properly.
+
+In addition to being an association loi 1901, Lichess is eligible to be in a slightly higher tier known as an association d’intérêt général (“association [charity] of general interest”) - and in fact we’re currently completing the paperwork for it. The label applies to organisations that work for a broad public interest - broader than a typical community sports club or local charity. General interest associations also need to have at least 200 members and at least €46,000 deposited in the bank. That’s not an issue for us, as that’s around what it costs to run Lichess each month!
+
+There's actually an even higher charity designation available in France: the association reconnue d'utilité publique (“recognised association of public utility”). This is for charities with a truly international scope that can credibly claim to benefit the wider public, such as Medecins sans Frontieres (Doctors Without Borders) and the Red Cross. Ultimately, this is what we’re aiming for.
+
+What’s the point of the different tiers? Well, a charity’s designation demonstrates high levels of responsibility and transparency, and the higher designations also provide further benefits to donors. For example, once we become an association of general interest, our French donors will be able to make tax-deductible donations, meaning they can reduce their individual tax burden through supporting us. In theory, this should also apply to donors who are citizens of other EU countries, but the last bit of legislation supporting EU-wide application was passed in 2009 and we’re still waiting for it to be cleanly implemented. Classic EU.
+
+
+
+We’ve also been looking into options to set up a charitable presence in the United States, by either partnering with an existing charity or helping to set up a new independent 501(c)(3) organisation to support free open source software/technology in chess. This would allow US donors to make tax-deductible donations, and it might also help boost the global profile of our mission and activities. It will take a lot of work though, and we’ve only started the journey. Hopefully we’ll be able to say more about this soon!
+
+We know that it won’t be easy to achieve these ambitions. We know that we’ll need to talk to awesome accountants and lovely lawyers, especially for the 501(c)(3) initiative. We know we’ll probably need to complete forms and produce reports, including annual end of year reports (which is something we want to do anyway). We know that all of this will increase our admin costs.
+
+But we also see this as an exciting opportunity to make Lichess stronger. After all, we want to remove barriers that prevent people from playing chess, studying chess, learning chess and discovering free open source software (FOSS). We believe that what we’ve built – the fruits of centuries of collective collaboration – should be free for anyone to access. And by ‘free’, we mean free both as in freedom (libre) and also as in price (gratis). No trackers. No ads. We want to equitably support the chess community (players, content creators, professionals, etc) as well as the wider FOSS ecosystem. We understand that this stuff might not be as exciting as talking about a new feature, but we hope that our community and our supporters can appreciate its importance.
+
+In fact, if you’ve managed to get this far, you might be just the sort of person we’re looking for – someone who’s clearly passionate about all things Lichess, even the minutiae. As we grow, we’re going to need more help from our community, and especially from skilled professionals who aren’t necessarily developers. Would you like to help? Do you have experience or skills in finance/accounting, law, nonprofit administration, communications, or something else that we could use? If so, we invite you to complete this short survey: https://forms.gle/TAAja3MqnbJRGgea9 (closes at 2359 CEST on Sunday 13 November).
+
+To quote Lester Freamon, “We’re building something, here, detective, we’re building it from scratch. All the pieces matter.”
