@@ -1,1 +1,221 @@
-/* TODO */
+* {
+  margin: 0;
+  font-family: CustomFont, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --postcardImgHeight: 300px;
+  --border_color: #8F8F8F
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas: "a b" "a c";
+  word-break: break-all;
+}
+
+.background,
+.font-size {
+  display: none;
+}
+
+
+.sidebar { grid-area: a; }
+header { grid-area: b; }
+.content { grid-area: c; }
+
+.sidebar {
+  padding: 1.5rem;
+  font-size: 3rem;
+}
+
+
+#background-btn {
+  z-index: 2;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: #8F8F8F 3px solid;
+}
+
+#font-size-btn {
+  z-index: 2;
+  position: fixed;
+  top: 2rem;
+  right: 5rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: #8F8F8F 3px solid;
+}
+
+
+
+header {
+  position: relative;
+  padding: 1rem 15%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("./font/Sevillana-Regular.ttf");
+}
+
+.name {
+  font-family: myFirstFont, serif;
+  font-size: 2.5rem;
+}
+
+
+@font-face {
+  font-family: mySecondFont;
+  src: url("./font/Inspiration-Regular.ttf");
+}
+
+@font-face {
+  font-family: firstLetter;
+  src: url("./font/Pacifico-Regular.ttf");
+}
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("./font/AmaticSC-Bold.ttf");
+  src: url("./font/AmaticSC-Regular.ttf");
+}
+
+
+.columns {
+  font-size: 1rem;
+  border: 3px gray dashed;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+
+}
+
+.columns div {
+  padding: 0.3rem;
+}
+
+.first p,
+.second p,
+.third p {
+  font-family: mySecondFont, serif;
+
+}
+
+.font-size:checked ~ header div,
+.font-size:checked ~ .content div {
+  font-size: 3rem;
+}
+
+.font-size:not(:checked) ~ header p {
+  font-size: 1.5rem;
+}
+
+.font-size:not(:checked) ~ .content p {
+  font-size: 1rem;
+}
+
+
+
+label img {
+  width: 30px;
+}
+
+
+.content {
+  width: 96%;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  padding: 2%;
+}
+
+
+.background:checked ~ header,
+.background:checked ~ .content,
+.background:checked ~ .sidebar {
+  background: #383636;
+  color: white;
+}
+
+.background:not(:checked) ~ header,
+.background:not(:checked) ~ .content,
+.background:not(:checked) ~ .sidebar {
+  background: beige;
+  color: black;
+}
+
+
+
+
+.content > div {
+  padding: 0.5rem;
+}
+
+.clo1,
+.clo2,
+.clo3,
+.clo4,
+.clo5 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.clo1 {
+  display: grid;
+  grid-template-areas: "img img img" "p1 p2 p3";
+}
+
+.pic1 { grid-area: img; }
+.col21 { grid-area: p1; }
+.col22 { grid-area: p2; }
+.col23 { grid-area: p3; }
+
+
+.clo1 p {
+  direction: rtl;
+  padding: 0.1rem;
+}
+
+.vert {
+  width: 0;
+  word-break: break-all;
+}
+
+.clo3 {
+  text-align: center;
+}
+
+.clo1 img,
+.clo2 img,
+.clo3 img,
+.clo4 img,
+.clo5 img{
+  width: 100%;
+}
+
+p:first-letter {
+  font-family: firstLetter, serif;
+}
+
+.quote {
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+  border: #8F8F8F 3px solid;
+  font-weight: bold;
+  color: red;
+}
+
