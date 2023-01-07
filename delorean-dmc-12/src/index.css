@@ -20,6 +20,19 @@
   position: relative;
 }
 
+.text-column.columns-3 {
+  column-count: 3;
+  column-fill: auto;
+  grid-column: span 3;
+}
+
+.text-column.columns-2 {
+  column-count: 2;
+  column-fill: auto;
+  grid-column: span 2;
+}
+
+
 .text-column:after,
 .text-column:before {
   position: absolute;
