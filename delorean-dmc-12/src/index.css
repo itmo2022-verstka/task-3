@@ -30,12 +30,12 @@
 }
 
 .text-column:before {
-  left: calc(-8px - 3px/2);
+  left: -9.5px;
   border-right: 3px solid #DADCE0;
 }
 
 .text-column:after {
-  right: calc(-8px + -3px/2);
+  right: -9.5px;
   border-left: 3px solid #DADCE0;
 }
 
