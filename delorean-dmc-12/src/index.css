@@ -1,1 +1,170 @@
 /* TODO */
+
+.newspaper-header {
+  text-align: center;
+  font-size: 48px;
+  margin: 30px auto;
+}
+
+
+.col-text-standard:first-letter {
+  color: red;
+  text-transform: uppercase;
+}
+
+.col-text-adds:first-letter {
+  color: red;
+  text-transform: uppercase;
+}
+
+.one-letter-row:first-letter {
+  color: red;
+  text-transform: uppercase;
+}
+
+
+.col-header {
+  text-align: center;
+  padding: 10px;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.col-text-standard {
+  padding: 10px;
+  font-family: Constantia, sans-serif;
+  word-break: break-all;
+  font-size: 22px;
+}
+
+.col-text-adds {
+  padding: 10px;
+  font-family: corbel, sans-serif;
+  word-break: break-all;
+  font-size: 22px;
+}
+
+.one-letter-row {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-family: arial, sans-serif;
+  padding: 10px;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-auto-rows: 450px 450px;
+  width: 1000px;
+  margin: auto;
+}
+
+.col {
+  box-sizing: border-box;
+  border-left: 2px solid lightgrey;
+  border-right: 2px solid lightgrey;
+  margin-bottom: 20px;
+}
+
+.col:nth-child(4n + 2) {
+
+}
+
+.col:nth-child(4n + 3) {
+}
+
+.col:nth-child(4n + 1) {
+}
+
+.col:nth-child(4n + 4) {
+}
+
+.big-pic-block-2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border-left: 2px solid lightgrey;
+  border-right: 2px solid lightgrey;
+  margin-bottom: 20px;
+}
+
+.big-pic-block {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border-left: 2px solid lightgrey;
+  border-right: 2px solid lightgrey;
+  margin-bottom: 20px;
+}
+
+.big-pic {
+  display: block;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+}
+
+
+
+.big-pic-wrapper {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-auto-rows: 225px;
+}
+
+
+.pig-img-wrapper {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+  margin: 10px auto;
+}
+
+.pig-img {
+  object-position: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.quote {
+  margin-top: 10px;
+  width: 230px;
+  padding: 20px;
+  font-size: 20px;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  font-family: Courier New, monospace;
+}
+
+
+
+blockquote {
+  margin: 0;
+}
+
+
+body {
+  background: antiquewhite;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
