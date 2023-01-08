@@ -8,18 +8,20 @@
 
 
 .col-text-standard:first-letter {
-  color: red;
   text-transform: uppercase;
+  font-weight: 800;
+  font-size: 28px;
 }
 
 .col-text-adds:first-letter {
-  color: red;
   text-transform: uppercase;
+  font-weight: 800;
+  font-size: 28px;
 }
 
 .one-letter-row:first-letter {
-  color: red;
   text-transform: uppercase;
+  font-weight: 800;
 }
 
 
@@ -60,6 +62,7 @@
   grid-auto-rows: 450px 450px;
   width: 1000px;
   margin: auto;
+  filter: grayscale(100%);
 }
 
 .col {
