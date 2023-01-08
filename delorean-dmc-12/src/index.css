@@ -1,5 +1,7 @@
 body {
   font-size: 12px;
+  hyphens: auto;
+  word-break: break-all;
 }
 
 li {
@@ -8,7 +10,7 @@ li {
 }
 
 .container {
-  border: 1px solid black;
+  border: 1px solid #000000;
 }
 
 .font-switcher:checked ~ .container li {
@@ -20,10 +22,10 @@ li {
 }
 
 .list-switcher:checked ~ .container li {
-  border-bottom: 1px solid lightyellow;
+  border-bottom: 1px solid #ffffe0;
 
-  background-color: black;
-  color: lightyellow;
+  background-color: #000000;
+  color: #ffffe0;
 }
 
 header {
@@ -33,6 +35,32 @@ header {
   overflow-x: hidden;
   grid-template-columns: 200px 1.5fr 200px 3fr 200px 1.5fr 200px;
   grid-template-rows: 15px 80px 15px;
+}
+
+.fp-cell--1 .li-1-1 h2 {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+}
+
+.li-1-1 {
+  font-family: 'NanumGothic', fantasy;
+  text-align: center;
+}
+
+.fp-cell--1 .li-1-1 {
+  height: 350px;
+}
+
+.li-1-2::first-letter,
+.li-1-4::first-letter,
+.li-1-6::first-letter {
+  font-family: 'Abbey_Dawn', fantasy;
+  text-transform: uppercase;
+}
+
+.quote {
+  color: #ff0000;
+  font-style: italic;
 }
 
 .box-quote {
@@ -59,62 +87,55 @@ header {
 }
 
 .list-switcher:checked ~ header {
-  border: 1px solid lightyellow;
+  border: 1px solid #ffffe0;
 
-  background-color: black;
-  color: lightyellow;
+  background-color: #000000;
+  color: #ffffe0;
 }
 
 .list-switcher:checked ~ .container {
   border-bottom: 1px solid lightyellow;
 
-  background-color: black;
-  color: lightyellow;
+  background-color: #000000;
+  color: #ffffe0;
 }
 
 .fp-cell {
   padding: 16px;
 }
 
-.main-page .fp-cell--5-1 {
-  grid-column-end: 3;
-  grid-column-start: 1;
-  grid-row-end: 1;
-  grid-row-start: 1;
-}
-
 .list-switcher:checked ~ .container .fp-cell--5-1 {
-  background-color: black;
-  color: lightyellow;
+  background-color: #000000;
+  color: #ffffe0;
 }
 
 .list-switcher:checked ~ .container .fp-cell {
-  border: 1px solid lightyellow;
+  border: 1px solid #ffffe0;
 }
 
 .list-switcher:not(:checked) ~ .container li {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000000;
 
-  background-color: lightyellow;
+  background-color: #ffffe0;
 }
 .list-switcher:not(:checked) ~ header {
-  border: 1px solid black;
+  border: 1px solid #000000;
 
-  background-color: lightyellow;
+  background-color: #ffffe0;
 }
 
 .list-switcher:not(:checked) ~ .container {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000000;
 
-  background-color: lightyellow;
+  background-color: #ffffe0;
 }
 
 .list-switcher:not(:checked) ~ .container .fp-cell {
-  border: 1px solid black;
+  border: 1px solid #000000;
 }
 
 .list-switcher:not(:checked) ~ .container .fp-cell--5-1 {
-  background-color: lightyellow;
+  background-color: #ffffe0;
 }
 
 .weather {
@@ -124,7 +145,7 @@ header {
 
 .list-switcher:checked ~ header .box-quote,
 .list-switcher:checked ~ header .weather {
-  border: 1px solid lightyellow;
+  border: 1px solid #ffffe0;
 }
 
 .list-switcher {
@@ -163,25 +184,10 @@ header {
 .erc-gerceg-page {
   position: relative;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 400px 1fr;
-}
-
-.fp-cell--5-1-1 {
-  grid-column-end: 4;
-  grid-column-start: 1;
-  grid-row-end: 1;
-  grid-row-start: 1;
+  column-count: 3;
 }
 
 .main-page {
-  position: relative;
-
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 150px 1fr;
-
   width: 100%;
   height: 100%;
 }
@@ -213,11 +219,6 @@ ul {
   margin-left: 0;
 
   padding-left: 0;
-}
-
-.li-1-1 {
-  font-family: 'NanumGothic', fantasy;
-  text-align: center;
 }
 
 .fp-cell--5-item {
@@ -261,12 +262,12 @@ h1 {
   font-size: 20px;
 }
 
+.frontpage-column1 {
+  column-count: 4;
+}
+
 .frontpage {
   position: relative;
-
-  display: grid;
-  grid-gap: 1px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 733px;
 
   margin: 0 -16px;
 }
@@ -288,4 +289,16 @@ h1 {
 .li-1-3 {
   font-family: 'Diploma', fantasy;
   text-align: center;
+}
+
+.page-with-img {
+  column-width: 1000px;
+}
+
+.first-article {
+  column-count: 2;
+}
+
+.img_check {
+  width: 40px;
 }
