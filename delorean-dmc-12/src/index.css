@@ -10,6 +10,7 @@
 
 @font-face {
   font-family: 'Font1';
+  font-style: normal;
   src: url('res/fonts/pobeda-regular.ttf');
 }
 
@@ -28,22 +29,43 @@
 }
 
 .v {
+  text-align: center;
   text-decoration: underline;
+  word-break: break-word;
+}
+
+.image-wrappers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+}
+
+.img-names {
+  font-family: TrailersFont, serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.names {
+  margin: 0;
 }
 
 .grid {
   display: grid;
   grid-gap: 1rem;
   grid-template-areas:
-    'setting1 setting1 setting2 setting2 setting3 setting3'
-    'trailer1 trailer1 trailer2 trailer2 trailer3 trailer3'
-    'header header header header header header'
-    'under-header-left under-header-left . . under-header-right under-header-right'
-    'article1 article1 article1 article1 article1 article1'
-    'article1 article1 article1 article1 article1 article1'
-    'article2 article2 article2 article2 article3 article3'
-    'article4 article4 article5 article5 article5 article5';
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    'setting1 setting1 setting2 setting2 setting3 setting3 advertise'
+    'trailer1 trailer1 trailer2 trailer2 trailer3 trailer3 advertise'
+    'header header header header header header advertise'
+    'under-header-left under-header-left . . under-header-right under-header-right advertise'
+    'article1 article1 article1 article1 article1 article1 advertise'
+    'article1 article1 article1 article1 article1 article1 advertise'
+    'article2 article2 article2 article2 article3 article3 advertise'
+    'article4 article4 article5 article5 article5 article5 advertise';
+  grid-template-columns: 5fr 5fr 5fr 5fr 5fr 5fr 1fr;
   grid-template-rows: auto;
 
   max-width: 1300px;
@@ -55,12 +77,14 @@
 .header {
   grid-area: header;
 
+  margin: 0;
+
   padding-top: 15px;
 
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 
-  color: black;
+  color: #000000ff;
   font-family: HeaderFont, serif;
   font-size: 80px;
   text-align: center;
@@ -74,7 +98,7 @@
 .trailers {
   padding: 5px;
 
-  background-color: lightgray;
+  background-color: #d3d3d3;
   font-family: TrailersFont, serif;
   font-size: 20px;
   text-align: justify;
@@ -109,6 +133,17 @@
   text-align: right;
 }
 
+#advertise {
+  grid-area: advertise;
+
+  font-family: Font1, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+}
+
 #article-1 {
   display: grid;
   align-content: stretch;
@@ -127,9 +162,11 @@
 }
 
 #img1 {
-  grid-area: img1;
-
   width: 100%;
+}
+
+#image-wrapper1 {
+  grid-area: img1;
 }
 
 #name1 {
@@ -145,7 +182,7 @@
 }
 
 .texts::first-letter {
-  color: red;
+  color: #ff0000;
   font-size: 30px;
 }
 
@@ -164,9 +201,11 @@
   text-align: center;
 }
 
-#img2 {
+#image-wrapper2 {
   grid-area: img2;
+}
 
+#img2 {
   width: 100%;
 }
 
@@ -225,7 +264,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
 
-  background-color: lightgray;
+  background-color: #d3d3d3;
   font-family: Font1, sans-serif;
   font-size: 50px;
   font-weight: bold;
@@ -246,6 +285,7 @@
   column-count: 2;
   font-size: 20px;
   text-align: justify;
+  word-break: break-all;
 }
 
 #article-5 {
@@ -279,6 +319,7 @@
   column-count: 3;
   font-size: 20px;
   text-align: justify;
+  word-break: break-all;
 }
 
 #default:checked ~ .grid .texts,
@@ -289,7 +330,9 @@
 
 #italic:checked ~ .grid .texts,
 #italic:checked ~ .grid .under-headers,
-#italic:checked ~ .grid .articles .names {
+#italic:checked ~ .grid .articles .names,
+#italic:checked ~ .grid .image-wrappers .img-names,
+#italic:checked ~ .grid #advertise {
   font-style: italic;
 }
 
@@ -297,28 +340,36 @@
 #white:checked ~ .grid .header,
 #white:checked ~ .grid .under-headers,
 #white:checked ~ .grid .articles {
-  border-color: black;
+  border-color: #000000;
 
-  background-color: white;
-  color: black;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 #black:checked ~ .grid,
 #black:checked ~ .grid .header,
 #black:checked ~ .grid .under-headers,
 #black:checked ~ .grid .articles {
-  border-color: white;
+  border-color: #ffffff;
 
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 #white:checked ~ .grid .grey {
-  background-color: lightgray;
+  background-color: #d3d3d3;
 }
 
 #black:checked ~ .grid .grey {
   background-color: #191919;
+}
+
+#normal:checked ~ .grid .articles .image-wrappers .img-names {
+  font-size: 15px;
+}
+
+#normal:checked ~ .grid #advertise {
+  font-size: 50px;
 }
 
 #normal:checked ~ .grid .texts {
@@ -337,6 +388,14 @@
   font-size: 15px;
 }
 
+#small:checked ~ .grid .articles .image-wrappers .img-names {
+  font-size: 10px;
+}
+
+#small:checked ~ .grid #advertise {
+  font-size: 35px;
+}
+
 #small:checked ~ .grid .texts {
   font-size: 16px;
 }
@@ -351,6 +410,14 @@
 
 #small:checked ~ .grid .under-headers {
   font-size: 12px;
+}
+
+#big:checked ~ .grid .articles .image-wrappers .img-names {
+  font-size: 20px;
+}
+
+#big:checked ~ .grid #advertise {
+  font-size: 70px;
 }
 
 #big:checked ~ .grid .texts {
