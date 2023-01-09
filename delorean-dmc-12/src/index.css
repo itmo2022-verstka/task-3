@@ -1,1 +1,140 @@
-/* TODO */
+@font-face {
+  font-family: 'Antonella script X';
+  src: url(font/antonella-script-x-bold.ttf);
+}
+@font-face {
+  font-family: 'Barocco Initial';
+  src: url(font/barocco-initial.ttf);
+}
+@font-face {
+  font-family: 'Debut Deco';
+  src: url(font/debut-deco-normal.ttf);
+}
+@font-face {
+  font-family: 'English Rose';
+  src: url(font/english-rose.ttf);
+}
+
+.antonella {
+  font-family: 'Antonella script X', serif;
+}
+.barocco {
+  font-family: 'Barocco Initial', serif;
+}
+.debut {
+  font-family: 'Debut Deco', serif;
+}
+.rose {
+  font-family: 'English Rose', serif;
+}
+
+.background-zone {
+  margin-top: 0.5rem;
+}
+
+.text-block {
+  font-size: 12px;
+}
+
+.column-border {
+  border-right: 2px solid black;
+  margin-right: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sub-block-invert {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.sub-block {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 5px;
+  margin-top: 0.5rem;
+}
+
+.read-zone {
+  border-top: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+}
+
+.header-style {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  font-size: 50px;
+  font-family: 'English Rose', serif;
+}
+
+.sub-header-style {
+  width: 100%;
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  text-align: center;
+  font-family: 'Barocco Initial', serif;
+}
+
+.font10 {
+  font-size: 10px;
+}
+.font20 {
+  font-size: 20px;
+}
+.font30 {
+  font-size: 30px;
+}
+.font40 {
+  font-size: 40px;
+}
+
+.input-item {
+  display: none;
+}
+.input-option {
+  margin-bottom: 0.4rem;
+}
+
+.input-item:checked + .label-item {
+  border: 2px black dashed;
+}
+
+#antonella-script-x-bold-font:checked ~ .background-zone > .read-zone {
+  font-family: 'Antonella script X', serif;
+}
+#barocco-initial-font:checked ~ .background-zone > .read-zone {
+  font-family: 'Barocco Initial', serif;
+}
+#debut-deco-normal-font:checked ~ .background-zone > .read-zone {
+  font-family: 'Debut Deco', serif;
+}
+#english-rose-font:checked ~ .background-zone > .read-zone {
+  font-family: 'English Rose', serif;
+}
+
+#black-text:checked ~ .background-zone {
+  background-color: #e3d0b5;
+  background-image: url('img/light-paper.jpeg');
+  color: #222222;
+  border-color: #2a2a2a;
+}
+#white-text:checked ~ .background-zone {
+  background-color: #1b2c48;
+  background-image: url('img/black-paper.jpg');
+  color: antiquewhite;
+  border-color: navajowhite;
+}
