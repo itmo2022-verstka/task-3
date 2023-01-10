@@ -4,6 +4,7 @@
   --vintage-color: #E8DCB8;
   --item-bg-color: #efefef;
   --text-color: black;
+  --subscription-color: red;
   --bright-color: chartreuse;
   --border-style: 1px solid goldenrod;
 
@@ -16,20 +17,15 @@
   --font-7: "Bernard MT Condensed", serif;
 }
 
-.frontpage {
-  box-sizing: border-box;
-  background-color: var(--vintage-color);
-  background-clip: content-box;
-  font-size: calc(1rem * var(--font-const));
-  color: var(--text-color);
-}
-
 body {
   margin: 0;
 }
 
 .frontpage {
-  margin-top: -20px;
+  box-sizing: border-box;
+  background-color: var(--vintage-color);
+  font-size: calc(1rem * var(--font-const));
+  color: var(--text-color);
   padding: 5px;
   background-clip: border-box;
   position: relative;
@@ -41,6 +37,18 @@ body {
   border-top: var(--border-style);
   border-bottom: var(--border-style);
   overflow: hidden;
+}
+
+.frontpage figure {
+  margin: 0;
+}
+
+.subscription {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: var(--subscription-color);
+  font-weight: bold;
 }
 
 .fp-item {
@@ -201,6 +209,11 @@ article :first-child:first-letter,
   grid-row: span 2;
 }
 
+.fp-cell--BiffContinue article {
+  column-count: 2;
+  column-gap: 20px;
+}
+
 .fp-cell--Young,
 .fp-cell--Cueto {
   grid-column: span 2;
@@ -233,6 +246,10 @@ article :first-child:first-letter,
 
 .fp-cell--Boots {
   grid-row: span 2;
+}
+
+.fp-cell--Boots article {
+  column-count: 2;
 }
 
 .fp-cell--BootsImg {
@@ -326,5 +343,5 @@ article :first-child:first-letter,
 .font-size-change,
 .font-family-change,
 .color-change {
-  visibility: hidden;
+  display: none;
 }
