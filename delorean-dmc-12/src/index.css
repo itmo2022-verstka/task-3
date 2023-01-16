@@ -1,14 +1,6 @@
-* {
+body {
   margin: 0;
   font-family: CustomFont, serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  --postcardImgHeight: 300px;
-  --border_color: #8F8F8F
-}
-
-body {
-  position: absolute;
   width: 100%;
   height: 100%;
   display: grid;
@@ -17,17 +9,18 @@ body {
 }
 
 .background,
-.font-size {
+.font-size,
+.font-family-size {
   display: none;
 }
 
 
-.sidebar { grid-area: a; }
+aside { grid-area: a; }
 header { grid-area: b; }
 .content { grid-area: c; }
 
-.sidebar {
-  padding: 1.5rem;
+aside {
+  padding: 40px;
   font-size: 3rem;
 }
 
@@ -35,8 +28,8 @@ header { grid-area: b; }
 #background-btn {
   z-index: 2;
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 10px;
+  right: 20px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -46,8 +39,19 @@ header { grid-area: b; }
 #font-size-btn {
   z-index: 2;
   position: fixed;
-  top: 2rem;
-  right: 5rem;
+  top: 100px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: #8F8F8F 3px solid;
+}
+
+#font-family-size-btn {
+  z-index: 2;
+  position: fixed;
+  top: 50px;
+  right: 20px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -55,13 +59,11 @@ header { grid-area: b; }
 }
 
 
-
 header {
-  position: relative;
-  padding: 1rem 15%;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 @font-face {
@@ -72,6 +74,7 @@ header {
 .name {
   font-family: myFirstFont, serif;
   font-size: 2.5rem;
+  width: 40%;
 }
 
 
@@ -94,22 +97,18 @@ header {
 
 .columns {
   font-size: 1rem;
+  width: 40%;
   border: 3px gray dashed;
   border-radius: 5px;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-
+  column-count: 3;
 }
 
 .columns div {
   padding: 0.3rem;
 }
 
-.first p,
-.second p,
-.third p {
+.first p {
   font-family: mySecondFont, serif;
-
 }
 
 .font-size:checked ~ header div,
@@ -125,7 +124,22 @@ header {
   font-size: 1rem;
 }
 
+.font-family-size:checked ~ header div,
+.font-family-size:checked ~ header p,
+.font-family-size:checked ~ .content div,
+.font-family-size:checked ~ aside  {
+  font-family: "DejaVu Sans Condensed", serif;
+}
 
+
+.picture-wrapper {
+  padding: 7px;
+  margin: 10px 0 5px 5px;
+}
+
+.picture-wrapper figcaption {
+  text-align: center;
+}
 
 label img {
   width: 30px;
@@ -135,21 +149,21 @@ label img {
 .content {
   width: 96%;
   display: grid;
-  grid-template-columns: repeat(5, 20%);
+  grid-template-columns: 20% 80%;
   padding: 2%;
 }
 
 
 .background:checked ~ header,
 .background:checked ~ .content,
-.background:checked ~ .sidebar {
+.background:checked ~ aside {
   background: #383636;
   color: white;
 }
 
 .background:not(:checked) ~ header,
 .background:not(:checked) ~ .content,
-.background:not(:checked) ~ .sidebar {
+.background:not(:checked) ~ aside {
   background: beige;
   color: black;
 }
@@ -161,11 +175,7 @@ label img {
   padding: 0.5rem;
 }
 
-.clo1,
-.clo2,
-.clo3,
-.clo4,
-.clo5 {
+.clo1 {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -174,11 +184,20 @@ label img {
 
 
 .clo1 {
-  display: grid;
-  grid-template-areas: "img img img" "p1 p2 p3";
+  display: flex;
+  flex-direction: column;
 }
 
-.pic1 { grid-area: img; }
+.text {
+  columns: 3;
+}
+
+.clo2 {
+  column-count: 4;
+  column-gap: 4%;
+}
+
+.picture-wrapper { grid-area: img; }
 .col21 { grid-area: p1; }
 .col22 { grid-area: p2; }
 .col23 { grid-area: p3; }
@@ -194,15 +213,7 @@ label img {
   word-break: break-all;
 }
 
-.clo3 {
-  text-align: center;
-}
-
-.clo1 img,
-.clo2 img,
-.clo3 img,
-.clo4 img,
-.clo5 img{
+.clo1 #pic1 {
   width: 100%;
 }
 
