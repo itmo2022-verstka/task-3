@@ -31,6 +31,10 @@ body {
     font-weight: bolder;
 }
 
+.bold {
+  font-size: 16px;
+}
+
 
 .italic {
     font-style: italic;
@@ -48,12 +52,9 @@ body {
     display: grid;
     grid-gap: 1rem;
     grid-template-areas:
-    'header header header header header'
-    'art_1 art_1 art_2 art_2 art_2'
+    'title title title title title'
     'art_1 art_1 art_2 art_2 art_2'
     'art_3 art_3 art_5 art_5 art_5'
-    'art_3 art_3 art_5 art_5 art_5'
-    'art_4 art_4 art_5 art_5 art_5'
     'art_4 art_4 art_5 art_5 art_5';
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -63,26 +64,26 @@ body {
     hyphens: auto;
 }
 
-#header {
-    grid-area: header;
+.title {
+    grid-area: title;
 
     display: grid;
     grid-gap: 1rem;
     grid-template-areas:
-    'title title title title info';
+    'main_info main_info main_info main_info recent_news';
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
 
     font-family: Font2, serif;
 }
 
-#title {
-    grid-area: title;
+.main_info {
+    grid-area: main_info;
 
     display: grid;
     grid-gap: 1rem;
     grid-template-areas:
-    '. head head head'
+    '. magazine_name magazine_name magazine_name'
     'sub_1 sub_2 sub_2 sub_2';
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -91,8 +92,8 @@ body {
     border: 2px solid gray;
 }
 
-#head {
-    grid-area: head;
+.magazine_name {
+    grid-area: magazine_name;
     font-size: 120px;
     text-align: center;
 }
@@ -109,8 +110,8 @@ body {
     text-align: center;
 }
 
-#info {
-    grid-area: info;
+.recent_news {
+    grid-area: recent_news;
 
     font-size: 10px;
     text-align: justify;
@@ -120,10 +121,6 @@ body {
     border: 2px solid gray;
 }
 
-#info h1 {
-    font-size: 15px;
-    text-align: justify;
-}
 
 /*======================================    1     =========================================*/
 
