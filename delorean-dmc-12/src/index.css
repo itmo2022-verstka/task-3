@@ -31,7 +31,7 @@ body {
     font-weight: bolder;
 }
 
-.bold {
+.big {
   font-size: 16px;
 }
 
@@ -340,3 +340,12 @@ body {
     font-size: 9px;
     text-align: justify;
 }
+
+.vertical {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 42px;
+  font-family: Font3, serif;
+}
+
+
