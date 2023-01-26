@@ -30,11 +30,13 @@
   padding: 10px;
   font-size: 32px;
   margin-bottom: 10px;
+  font-family: Josefin Sans, sans-serif;
 }
 
 .col-text-standard {
   padding: 10px;
-  font-family: Constantia, sans-serif;
+  font-family: Oswald, sans-serif;
+  font-weight: 300;
   word-break: break-all;
   font-size: 22px;
 }
@@ -49,7 +51,7 @@
 .one-letter-row {
   writing-mode: vertical-lr;
   text-orientation: upright;
-  font-family: arial, sans-serif;
+  font-family: Raleway, sans-serif;
   padding: 10px;
   font-size: 50px;
   text-transform: uppercase;
@@ -72,18 +74,6 @@
   margin-bottom: 20px;
 }
 
-.col:nth-child(4n + 2) {
-
-}
-
-.col:nth-child(4n + 3) {
-}
-
-.col:nth-child(4n + 1) {
-}
-
-.col:nth-child(4n + 4) {
-}
 
 .big-pic-block-2 {
   grid-column-start: 3;
@@ -170,4 +160,16 @@ body {
 
 h2 {
   margin: 0;
+}
+
+
+.pic-short-assign-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.pic-short-assign {
+  margin: auto;
+  font-family: Raleway, sans-serif;
 }
