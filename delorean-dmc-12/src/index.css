@@ -29,7 +29,6 @@
   text-align: center;
   padding: 10px;
   font-size: 32px;
-  margin-bottom: 10px;
   font-family: Josefin Sans, sans-serif;
 }
 
@@ -172,4 +171,18 @@ h2 {
 .pic-short-assign {
   margin: auto;
   font-family: Raleway, sans-serif;
+}
+
+.col-text-with-magic {
+  padding: 10px;
+  font-family: Oswald, sans-serif;
+  font-weight: 300;
+  word-break: break-all;
+  font-size: 22px;
+  column-count: 2;
+  column-rule: 1px solid black
+}
+
+p {
+  margin: 0
 }
