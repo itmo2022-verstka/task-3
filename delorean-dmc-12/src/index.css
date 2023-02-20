@@ -1,1 +1,808 @@
-/* TODO */
+:root {
+  --text-color: black;
+  --font-size: 10px;
+  --main-font: 'Times New Roman', sans-serif;
+  --condensed-font: 'Times New Roman condensed', sans-serif;
+  --content-side-margin: 10px;
+  --grid-gap: 10px;
+  --transition-time: 1.5s;
+  --height-with-font-2: 0px;
+  --height-with-big-font: 0px;
+}
+
+@font-face {
+  font-family: 'New York Times Title';
+  src: url('fonts/Chomsky.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Times New Roman condensed';
+  src: url('fonts/Times New Roman condensed.ttf');
+}
+
+@font-face {
+  font-family: 'ITC Cheltenham Std';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/CheltenhamStd-Book.ttf');
+}
+
+@font-face {
+  font-family: 'ITC Cheltenham Std condensed';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/CheltenhamStd-BookCond.ttf');
+}
+
+@font-face {
+  font-family: 'ITC Cheltenham Std condensed';
+  font-style: italic;
+  font-weight: normal;
+  src: url('fonts/CheltenhamStd-BookCondIt.ttf');
+}
+
+@font-face {
+  font-family: 'ITC Cheltenham Std';
+  font-style: italic;
+  font-weight: normal;
+  src: url('fonts/CheltenhamStd-BookItalic.ttf');
+}
+
+@font-face {
+  font-family: 'ITC Cheltenham Std';
+  font-style: normal;
+  font-weight: bold;
+  src: url('fonts/CheltenhamStd-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'ITC Cheltenham Std';
+  font-style: italic;
+  font-weight: bold;
+  src: url('fonts/CheltenhamStd-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'ITC Cheltenham Std condensed';
+  font-style: italic;
+  font-weight: bold;
+  src: url('fonts/CheltenhamStd-BoldCondIt.ttf');
+}
+
+@font-face {
+  font-family: 'ITC Cheltenham Std condensed';
+  font-style: normal;
+  font-weight: bold;
+  src: url('fonts/CheltenhamStd-BoldCond.ttf');
+}
+
+.body {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  height: 100vh;
+  margin: 0;
+
+  transition: background var(--transition-time) ease-in-out;
+
+  background: url('img/paper-background.png') 0 0 repeat;
+  color: var(--text-color);
+}
+
+/* ------------------ */
+
+.newspaper-header {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
+  grid-template-rows: auto 4px 20px 4px;
+
+  width: 100%;
+  margin: 0;
+}
+
+/* ------------------ */
+
+.newspaper-settings {
+  display: flex;
+  grid-column: 2;
+
+  width: fit-content;
+  height: 75px;
+
+  color: var(--text-color);
+}
+
+.settings {
+  display: inline;
+
+  width: 20px;
+  height: 20px;
+  margin-bottom: 49px;
+
+  transition: color var(--transition-time) ease-in-out, transform 0.5s;
+
+  filter: none;
+}
+
+.settings-window {
+  display: none;
+
+  width: auto;
+  height: auto;
+  margin: 0 0 0 5px;
+  padding: 0 5px 0 20px;
+
+  border: 2px solid var(--text-color);
+
+  transition-duration: var(--transition-time);
+  transition-property: color, border;
+  transition-timing-function: ease-in-out;
+  transform-origin: top;
+
+  font-size: 15px;
+  list-style: circle;
+}
+
+.newspaper-settings:hover > .settings {
+  transition: 0.5s;
+  transform: rotate(180deg);
+}
+
+@keyframes y-scale {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transition: transform ease-in-out;
+    transform: scaleY(100%);
+  }
+}
+
+.newspaper-settings:hover > .settings-window {
+  display: block;
+
+  animation: y-scale 0.5s ease-in-out;
+}
+
+.newspaper-title {
+  grid-row: 1;
+
+  padding: 5px 0;
+
+  color: var(--text-color);
+}
+
+.newspaper-title.quote {
+  grid-column: 1;
+
+  width: 130px;
+  margin-left: var(--content-side-margin);
+  padding: 15px 10px;
+
+  border: 2px solid var(--text-color);
+
+  font-family: var(--main-font);
+  font-size: 16px;
+  text-align: center;
+}
+
+.newspaper-title.title {
+  justify-self: center;
+  grid-column: 3;
+
+  margin: 0;
+
+  font-family: 'New York Times Title', sans-serif;
+  font-size: 96px;
+  font-weight: normal;
+  text-align: center;
+  word-spacing: -10px;
+}
+
+.newspaper-title.weather {
+  justify-self: end;
+  grid-column: 5;
+
+  width: 160px;
+  margin-right: var(--content-side-margin);
+
+  text-align: justify;
+}
+
+.weather-title {
+  width: 100%;
+  margin: 5px 0;
+
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.weather-text {
+  width: 100%;
+  margin: 0;
+
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+}
+
+.double-border {
+  grid-column: 1 / -1;
+
+  width: 100%;
+  margin: 0;
+
+  border-bottom: 4px double var(--text-color);
+}
+
+.double-border.title {
+  grid-row: 2;
+}
+
+.double-border.folio {
+  grid-row: 4;
+}
+
+/* ------------------ */
+
+.folio {
+  grid-row: 3;
+
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  font-style: italic;
+}
+
+.folio.number {
+  grid-column: 1;
+
+  margin-left: var(--content-side-margin);
+
+  text-align: left;
+}
+
+.folio.date {
+  grid-column: 3;
+
+  text-align: center;
+}
+
+.folio.cost {
+  grid-column: 5;
+
+  margin-right: var(--content-side-margin);
+
+  text-align: right;
+}
+
+/* ------------------ */
+
+.newspaper-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: min-content 1fr;
+
+  width: auto;
+  margin-left: var(--content-side-margin);
+
+  color: var(--text-color);
+  font-family: var(--main-font);
+}
+
+.section-border {
+  grid-column: 1 / -1;
+
+  margin: 10px 30%;
+
+  border-bottom: 1px solid var(--text-color);
+}
+
+.byline {
+  grid-column: 1 / -1;
+
+  margin: 0;
+
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  font-weight: bold;
+  text-align: center;
+}
+
+.credits {
+  grid-column: 1 / -1;
+
+  width: 100%;
+  margin: 0 0 5px;
+
+  font-family: var(--main-font);
+  font-size: calc(var(--font-size) / 1.3);
+  font-weight: normal;
+  text-align: center;
+}
+
+.credits.photo {
+  margin: 2px 0;
+
+  text-align: right;
+}
+
+.text-wrapper {
+  width: 100%;
+  height: auto;
+
+  border-bottom: 1px solid var(--text-color);
+
+  transition-duration: var(--transition-time);
+  transition-property: border, column-rule;
+  transition-timing-function: ease-in-out;
+
+  column-fill: auto;
+  column-gap: 4px;
+  column-rule: 1px var(--text-color) solid;
+}
+
+.text {
+  width: 100%;
+  height: min-content;
+  margin: 0;
+
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  text-align: justify;
+}
+
+.text:first-letter {
+  float: left;
+
+  /* Не канон, но задание требует */
+  font-family: 'New York Times Title', sans-serif;
+  font-size: calc(var(--font-size) * 4);
+  line-height: calc(var(--font-size) * 2);
+}
+
+.text.without-first-letter-style:first-letter {
+  float: inherit;
+
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  line-height: normal;
+}
+
+.old-photo {
+  width: 100%;
+
+  filter: grayscale(100%) sepia(60%) opacity(70%) contrast(150%) blur(0.5px);
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.old-photo-wrapper {
+  height: fit-content;
+
+  background: radial-gradient(transparent 50%, black);
+  font-size: 0;
+  opacity: 90%;
+}
+
+.continued {
+  height: min-content;
+  margin: 0;
+
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  font-weight: bold;
+  text-align: center;
+}
+
+.caption {
+  height: min-content;
+  margin: 0;
+
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  font-weight: bold;
+  text-align: center;
+}
+
+.section-border.continued-border {
+  margin: 6px 30%;
+}
+
+/* ------------------ */
+
+.ai {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  grid-template-columns: 1fr 1fr;
+
+  width: auto;
+  padding-right: 2px;
+
+  border-right: 1px solid var(--text-color);
+}
+
+.ai .title {
+  margin: 5px 0 0;
+
+  font-family: var(--condensed-font);
+  font-size: 33px;
+  text-align: left;
+}
+
+.chat-gpt {
+  width: 100%;
+}
+
+.chat-gpt .title {
+  margin: 0;
+
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
+}
+
+.chat-gpt .text-wrapper {
+  border-bottom: 0;
+
+  column-count: 2;
+}
+
+.microsoft-chatbot .text-wrapper {
+  column-count: 2;
+}
+
+.microsoft-chatbot .title {
+  margin: 0;
+
+  font-family: var(--condensed-font);
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.microsoft-chatbot .quote,
+.family-restaurant .quote {
+  margin: 2px 2px 15px;
+  padding: 2px;
+
+  border: 1px solid var(--text-color);
+
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* ------------------ */
+
+.water-rescue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 2 / 4;
+  grid-row: 1;
+
+  width: calc(100% - 30px);
+  height: fit-content;
+  padding: 12px 15px 0;
+
+  border-right: 1px solid var(--text-color);
+}
+
+.double-border.water-rescue-border {
+  width: calc(100% + 15px);
+  margin: 3px 0;
+}
+
+/* ------------------ */
+
+.family-restaurant {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2;
+
+  width: 100%;
+  height: auto;
+
+  border-right: 1px solid var(--text-color);
+}
+
+.family-restaurant .title {
+  width: auto;
+  margin: 0;
+  padding: 0 2px;
+
+  font-family: var(--main-font);
+  font-size: 38px;
+  font-style: italic;
+  text-align: center;
+}
+
+.family-restaurant .text-wrapper {
+  width: auto;
+  height: auto;
+  margin: 0 2px;
+
+  column-count: 2;
+  column-fill: balance;
+}
+
+.family-restaurant .quote {
+  margin-bottom: 2px;
+}
+
+/* ------------------ */
+
+.third-column-articles {
+  display: grid;
+  grid-column: 3;
+  grid-template-columns: 1fr 1fr;
+
+  width: 100%;
+  height: auto;
+  margin: 0;
+
+  border-right: 1px solid var(--text-color);
+}
+
+.malaria {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1;
+
+  width: auto;
+  padding: 0 2px;
+
+  border-right: 1px solid var(--text-color);
+}
+
+.malaria .title {
+  margin: 0;
+
+  font-family: var(--condensed-font);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bone-conduction {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2;
+
+  width: auto;
+  padding: 0 2px;
+}
+
+.bone-conduction .title {
+  margin: 0;
+
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.bone-conduction .vertical-text {
+  float: right;
+
+  width: var(--font-size);
+  height: min-content;
+  margin: 0 0 0 2px;
+  padding-left: 3px;
+
+  border: 1px solid var(--text-color);
+  border-right: 0;
+
+  font-family: var(--main-font);
+  font-size: calc(var(--font-size) * 1.2);
+  text-orientation: upright;
+  writing-mode: vertical-rl;
+}
+
+/* ------------------ */
+
+.modern-love {
+  display: grid;
+  grid-column: 4;
+  grid-row: 1 / -1;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50% 50%;
+
+  width: 100%;
+
+  /* auto в rows не понимает высоту страницы, если делать 100%, как и 1fr 1fr */
+  height: calc(796px + var(--height-with-font-2) + var(--height-with-big-font));
+  margin: 0;
+
+  border-bottom: 1px solid var(--text-color);
+}
+
+.modern-love .old-photo {
+  width: 100%;
+  height: 100%;
+
+  filter: grayscale(100%) sepia(100%);
+  object-fit: initial;
+}
+
+.modern-love .old-photo.left {
+  grid-area: 1 / 1;
+
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.modern-love .old-photo.right {
+  grid-area: 2 / 2;
+
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.modern-love .first-story,
+.modern-love .second-story {
+  display: flex;
+  flex-direction: column;
+
+  width: auto;
+  padding: 0 2px;
+}
+
+.modern-love .first-story {
+  grid-area: 1 / 2;
+
+  padding-top: 5px;
+}
+
+.modern-love .second-story {
+  grid-area: 2 / 1;
+}
+
+.modern-love .first-story .title {
+  margin: 0;
+
+  font-family: var(--condensed-font);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  text-align-last: right;
+}
+
+.modern-love .text-wrapper {
+  border-bottom: 0;
+}
+
+.modern-love .second-story .title {
+  margin: 0;
+
+  font-family: var(--condensed-font);
+  font-size: 21px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  text-align-last: right;
+}
+
+/* ------------------ */
+
+.font-size,
+.night-mode,
+.font {
+  display: none;
+}
+
+.font-change,
+.night-mode-elem,
+.font-type {
+  cursor: pointer;
+}
+
+.font-normal {
+  font-size: 10px;
+}
+
+.font-big {
+  font-size: 16px;
+}
+
+#font-big:checked ~ .newspaper-header,
+#font-big:checked ~ .newspaper-content {
+  --font-size: 16px;
+}
+
+#font-big:checked ~ .newspaper-content .modern-love {
+  --height-with-big-font: 845px;
+}
+
+#font-normal:checked ~ .newspaper-header label[for='font-normal'] {
+  text-decoration: underline;
+}
+
+#font-big:checked ~ .newspaper-header label[for='font-big'] {
+  text-decoration: underline;
+}
+
+#night-mode-on:checked ~ .newspaper-header,
+#night-mode-on:checked ~ .newspaper-content {
+  --text-color: white;
+}
+
+#night-mode-on:checked ~ .newspaper-header .newspaper-settings .settings,
+#night-mode-on:checked ~ .newspaper-content .modern-love .old-photo {
+  transition: var(--transition-time);
+
+  filter: grayscale(100%) invert();
+}
+
+#night-mode-off:checked ~ .newspaper-header label[for='night-mode-off'] {
+  text-decoration: underline;
+}
+
+#night-mode-on:checked ~ .newspaper-header label[for='night-mode-on'] {
+  text-decoration: underline;
+}
+
+.body:has(> #night-mode-on:checked) {
+  transition: background var(--transition-time) ease-in-out;
+
+  background: black;
+}
+
+/* Селекторы по тегам нужны, т.к. все элементы, для которых не переопределен transition,
+ должны изменяться плавно
+ */
+p,
+h1,
+h2,
+h3,
+h4,
+.bone-conduction .text-wrapper .text {
+  transition-duration: var(--transition-time);
+  transition-property: color, border;
+  transition-timing-function: ease-in-out;
+}
+
+section,
+article {
+  transition: border var(--transition-time) ease-in-out;
+}
+
+#font-2:checked ~ .newspaper-header,
+#font-2:checked ~ .newspaper-content {
+  --main-font: 'ITC Cheltenham Std';
+  --condensed-font: 'ITC Cheltenham Std condensed';
+}
+
+#font-2:checked ~ .newspaper-content .family-restaurant .title {
+  font-size: 33px;
+}
+
+#font-2:checked ~ .newspaper-header .newspaper-title.quote,
+#font-2:checked ~ .newspaper-content .third-column-articles .malaria .title,
+#font-2:checked ~ .newspaper-content .third-column-articles .bone-conduction .title {
+  font-size: 15px;
+}
+#font-2:checked ~ .newspaper-content .ai .chat-gpt .title {
+  font-size: 14px;
+}
+
+#font-2:checked ~ .newspaper-content .ai .microsoft-chatbot .title {
+  font-size: 17px;
+}
+
+#font-2:checked ~ .newspaper-content .modern-love {
+  --height-with-font-2: 84px;
+}
+
+#font-1:checked ~ .newspaper-header label[for='font-1'] {
+  text-decoration: underline;
+}
+
+#font-2:checked ~ .newspaper-header label[for='font-2'] {
+  text-decoration: underline;
+}

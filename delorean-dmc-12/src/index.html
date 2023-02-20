@@ -1,11 +1,360 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>01-about-cats</title>
+    <title>03-delorean-dmc</title>
     <link rel="stylesheet" href="./index.css">
   </head>
-  <body>
-    <!-- TODO -->
+  <body class="body">
+    <input type="radio" id="font-normal" class="font-size" name="font-size" value="10px" checked>
+    <input type="radio" id="font-big" class="font-size" name="font-size" value="16px">
+    <input type="radio" id="night-mode-off" class="night-mode"
+           name="night-mode" value="off" checked>
+    <input type="radio" id="night-mode-on" class="night-mode" name="night-mode" value="on">
+    <input type="radio" id="font-1" class="font" name="font" value="1" checked>
+    <input type="radio" id="font-2" class="font" name="font" value="2">
+    <header class="newspaper-header">
+      <p class="newspaper-title quote">
+        "All the News That's Fit to Print."
+      </p>
+      <div class="newspaper-settings">
+        <img src="img/settings.png" alt="settings" class="settings">
+        <ul class="settings-window">
+          <li class="font-size-element">
+            Font size:&ensp;
+            <label for="font-normal" class="font-change font-normal">Normal</label>
+            <label for="font-big" class="font-change font-big">Big</label>
+          </li>
+          <li class="night-mode-element">
+            Night mode:&ensp;
+            <label for="night-mode-off" class="night-mode-elem night-mode-on">off</label>
+            <label for="night-mode-on" class="night-mode-elem night-mode-off">on</label>
+          </li>
+          <li class="font-element">
+            Font:&ensp;
+            <label for="font-1" class="font-type font-1">Times NR</label>
+            <label for="font-2" class="font-type font-2">Chomsky</label>
+          </li>
+        </ul>
+      </div>
+      <h1 class="newspaper-title title">
+        The New York Times.
+      </h1>
+      <div class="newspaper-title weather">
+        <h2 class="weather-title">LATE CITY EDITION</h2>
+        <p class="weather-text">
+          Weather: An ex&shy;ception&shy;ally cold January has brought the
+          region mi&shy;sery and snarled travel. Experts blame the same arctic sys&shy;tem
+          that hit the United States last&nbsp;month.
+        </p>
+      </div>
+      <p class="double-border title"></p>
+      <p class="folio number">VOL.CLXV....No.14.88</p>
+      <p class="folio date">NEW YORK, FRIDAY, FEBUARY 17, 2023</p>
+      <p class="folio cost">FREE ONLINE VERSION</p>
+      <p class="double-border folio"></p>
+    </header>
+    <main class="newspaper-content">
+      <article class="ai">
+        <h2 class="title">ARTIFICIAL INTELLIGENCE</h2>
+        <p class="section-border"></p>
+        <section class="chat-gpt">
+          <h3 class="title">How to Spot Robots in a World of A.I.–Generated Text</h3>
+          <p class="section-border"></p>
+          <h3 class="byline">By KEITH COLLINS</h3>
+          <h4 class="credits">Special to The New York Times</h4>
+          <div class="text-wrapper">
+            <p class="text">
+              When artificial intel&shy;ligence soft&shy;ware like ChatGPT writes,
+              it con&shy;siders many options for each word, tak&shy;ing into ac&shy;count
+              the response it has writ&shy;ten so far and the question be&shy;ing asked.
+              It as&shy;signs a score to each option on the list,
+              which quan&shy;ti&shy;fies how likely the word is to come next,
+              based on the vast amount of hu&shy;man-writ&shy;ten text it&nbsp;has&nbsp;analyzed.
+              <br/>
+              &emsp;ChatGPT, which is built on what is known as a large lan&shy;guage model,
+              then choo&shy;ses a word with a high score, and moves on to the next one.
+              The model’s out&shy;put is of&shy;ten so so&shy;phi&shy;sticated that it can seem like
+              the chat&shy;bot un&shy;der&shy;stands what it is saying — but it&nbsp;does&nbsp;not.
+              <br/>
+              &emsp;Every choice it makes is de&shy;ter&shy;mined by com&shy;plex math and huge
+              amounts of data. So much so that it often pro&shy;duces text that is both
+              cohe&shy;rent and ac&shy;curate. But when ChatGPT says some&shy;th&shy;ing that
+              is un&shy;true, it inherently does not&nbsp;realize&nbsp;it.
+              <br/>
+              &emsp;It may soon become com&shy;mon to en&shy;counter a tweet, es&shy;say or
+              news article and wonder if it was writ&shy;ten by artificial
+              intel&shy;ligence soft&shy;ware. There could be quest&shy;ions over the
+              author&shy;ship of a given piece of writ&shy;ing, like in academic set&shy;t&shy;ings,
+              or the vera&shy;city of its con&shy;tent, in the case of an article. There could also
+              be quest&shy;ions about auth&shy;enti&shy;city: If a mis&shy;lead&shy;ing idea
+              sud&shy;denly ap&shy;pears in posts ac&shy;ross the inter&shy;net, is it
+              spread&shy;ing organic&shy;al&shy;ly, or have the posts been ge&shy;nerated by A.I.
+              to cre&shy;ate the ap&shy;pearance of real&nbsp;traction?
+              <br/>
+              &emsp;Tools to iden&shy;tify whet&shy;her a piece of text was writ&shy;ten by A.I.
+              have star&shy;ted to emerge in recent months, in&shy;clud&shy;ing one created by
+              OpenAI, the com&shy;pany be&shy;hind ChatGPT. That tool uses an A.I. model trained to
+              spot dif&shy;feren&shy;ces bet&shy;ween gen&shy;erated and hu&shy;man-writ&shy;ten
+              text. When OpenAI tes&shy;ted the tool, it cor&shy;rec&shy;tly iden&shy;tified A.I.
+              text in only about half of the gen&shy;erated writ&shy;ing sam&shy;ples it analyzed.
+              The com&shy;pany said at the time that it had
+              rele&shy;ased the experimen&shy;tal de&shy;tec&shy;tor
+              <i>“to get feed&shy;back on whether im&shy;perfect
+                tools like this one&nbsp;are&nbsp;useful.”</i>
+              <br/>
+              &emsp;Iden&shy;tify&shy;ing gen&shy;erated text, ex&shy;perts say, is
+              be&shy;com&shy;ing increas&shy;ingly dif&shy;ficult as soft&shy;ware like ChatGPT
+              continues to ad&shy;vance and turns out text that is more con&shy;vinc&shy;ingly
+              hu&shy;man. OpenAI is now ex&shy;periment&shy;ing with a tech&shy;nology that would
+              in&shy;sert special words into the text that ChatGPT gen&shy;erates, mak&shy;ing it
+              easi&shy;er to de&shy;tect later.
+              The tech&shy;nique is known as&nbsp;watermarking.
+              <br/>
+              &emsp;The water&shy;mark&shy;ing met&shy;hod that OpenAI is exp&shy;lor&shy;ing is
+              si&shy;milar to one des&shy;cribed in a recent paper by re&shy;searchers at the
+              Univer&shy;sity of Maryland, said Jan Leike,
+              the head of align&shy;ment at OpenAI. Here is how&nbsp;it&nbsp;works.
+            </p>
+            <p class="section-border continued-border"></p>
+            <p class="continued">Continued on Page 11, Column 3</p>
+          </div>
+        </section>
+        <p class="section-border"></p>
+        <section class="microsoft-chatbot">
+          <h3 class="title">Microsoft Considers More Limits for Its New A.I. Chatbot</h3>
+          <p class="section-border"></p>
+          <h3 class="byline">By KAREN WEISE and CADE METZ</h3>
+          <h4 class="credits">Special to The New York Times</h4>
+          <div class="text-wrapper">
+            <p class="text">
+              When Microsoft intro&shy;duced a new version of its Bing search engine that includes
+              the artificial intel&shy;ligence of a chatbot last week, company execu&shy;tives
+              knew they were climbing out&nbsp;on&nbsp;a&nbsp;limb.
+              <br/>
+              &emsp;They expected that some res&shy;ponses from the new chatbot might not be
+              entirely accurate, and had built in measures to protect against users who tried to
+              push it to do strange things or unleash racist or harm&shy;ful&nbsp;screeds.
+              <br/>
+              &emsp;But Microsoft was not quite ready for the sur&shy;prising creep&shy;iness
+              exp&shy;erienced by users who tried to engage the chatbot in open-ended and probing
+              personal conver&shy;sations — even though that issue is well known in the small world
+              of re&shy;searchers who specialize in artificial intel&shy;ligence.
+              <br/>
+              &emsp;Now the company is con&shy;sidering tweaks and guardrails for the new Bing in
+              an attempt to reel in some of its more alarming and stran&shy;gely human&shy;like
+              responses. Microsoft is looking at adding tools for users to restart
+              conver&shy;sations, or give them more control over&nbsp;tone.
+              <br/>
+              &emsp;Kevin Scott, Microsoft’s chief tech&shy;nology officer, told The New York Times
+              that it was also con&shy;sidering limiting conver&shy;sation lengths before they
+              veered into strange ter&shy;ritory. Microsoft said that long chats could confuse the
+              chatbot, and that it picked up on its users’ tone, some&shy;times turning&nbsp;testy.
+              <br/>
+            </p>
+            <p class="section-border continued-border"></p>
+            <p class="continued">Continued on Page 12, Column 1</p>
+            <p class="quote">
+              “One area where we are lear&shy;ning a new use-case for chat is how people are
+              using it as a tool for more general dis&shy;covery of the world,
+              and for social enter&shy;tainment.”
+            </p>
+          </div>
+        </section>
+      </article>
+      <section class="water-rescue">
+        <div class="old-photo-wrapper">
+          <img src="img/water-rescue.jpg" alt="Water-rescue training program" class="old-photo">
+        </div>
+        <p class="credits photo">The New York Times/Ruth Fremson</p>
+        <p class="caption">
+          IN A TREACHEROUS CORNER OF WASHINGTON, A CLASSROOM WITH 40-FOOT WAVES:
+          One of the most challenging water-rescue training programs in the world is run by the
+          Coast Guard on the Columbia River when the conditions are at their roughest, page 7.
+        </p>
+        <p class="double-border water-rescue-border"></p>
+      </section>
+      <article class="family-restaurant">
+        <h3 class="title">The Family Restaurant</h3>
+        <p class="section-border"></p>
+        <h3 class="byline">By MELISSA GUERRERO</h3>
+        <h4 class="credits">Special to The New York Times</h4>
+        <div class="text-wrapper">
+          <p class="text">
+            Ivy Berubes, 22, orders a Shirley Temple at the Sarapes Mexican Restaurant bar.
+            They make it for her even though it’s not on the menu.
+            The menu also doesn’t list “The Tommy Bowl” — a deconstructed burrito
+            — but Tommy Agramonte, 20, gets to order it; after all, it is named after him.
+            Sade Guess, 21, swears by the birria tacos, another off-menu&nbsp;item.
+            <br/>
+            &emsp;Located in Enfield, a quiet Connecticut suburb near the border of Massachusetts,
+            Sarapes is owned and operated by the Chavez Mellado family,
+            who immigrated from Mexico in&nbsp;the&nbsp;1980s.
+          </p>
+          <p class="quote">
+            “It’s one of the reasons why we’ve been
+            able to maintain ourselves in this&nbsp;country,”
+          </p>
+          <p class="text without-first-letter-style">
+            said Adrian Martinez Chavez, the photo&shy;grapher for this story, whose grandparents
+            Eduardo Chavez Solano and Cutberta Mellado de Chavez started the restaurant.
+            His grand&shy;father passed away a few years ago; Adrian’s
+            grandmother and his aunt María Del Carmen Chavez run the place now,
+            and his cousins Xochitl and Zuyuani Llanas, 22 and 20, are both&nbsp;managers.
+            <br/>
+            &emsp;What keeps these 20-somethings coming back to Sarapes is not just the secret(ish)
+            menu items or the occasional impromptu conga line that snakes around the booths.
+            The space is a physical reminder of their kinship. When they come home to Sarapes,
+            they can return to where they&nbsp;started.
+            <br/>
+            &emsp;Over the years, Sarapes has become a staple
+            in the broader Enfield&nbsp;community.
+          </p>
+          <p class="section-border continued-border"></p>
+          <p class="continued">Continued on Page 14, Column 3</p>
+          <p class="quote">
+            “My cousin called it ‘the headquarters’
+            because that’s where we would al&shy;ways meet to talk about&nbsp;stuff.”
+          </p>
+          <p class="quote">
+            “The people at Sarapes definitely feel like family to you.
+            They accept you as one of their own like it’s no&shy;thing.”
+          </p>
+        </div>
+      </article>
+      <article class="third-column-articles">
+        <section class="malaria">
+          <h3 class="title">How Climate Change Is Spreading Malaria in Africa</h3>
+          <p class="section-border"></p>
+          <h3 class="byline">By APOORVA MANDAVILLI</h3>
+          <h4 class="credits">Special to The New York Times</h4>
+          <div class="text-wrapper">
+            <p class="text">
+              The mosquitoes that transmit the disease dramatically increased their range
+              over the last century as temperatures warmed, scientists&nbsp;reported.
+              <br/>
+              &emsp;Warming temperatures are chasing animals and plants to new habitats, sometimes
+              with devastating consequences to ecosystems. But there is little evidence
+              regarding how far and how fast the invaders might&nbsp;be&nbsp;moving.
+              <br/>
+              &emsp;A new study offers a glimpse of the future by looking to the past. Mosquitoes
+              that transmit malaria in sub-Saharan Africa have moved to higher elevations by
+              about 6.5 meters (roughly 21 feet) per year and away from the Equator by 4.7
+              kilometers (about three miles) per year over the past
+              century, according to&nbsp;the&nbsp;study.
+              <br/>
+              &emsp;That pace is consistent with climate change and may explain why malaria’s
+              range has expanded over the past few decades, the authors said. The results
+              have serious implications for countries that are unprepared
+              to cope with&nbsp;the&nbsp;disease.
+              <br/>
+              &emsp;Most studies on the impact of climate change on health tend to
+              focus on the spread of disease — which can be tricky to trace to any single
+              cause — and to be predictive. The new study is instead a retrospective
+              look at how mosquitoes have&nbsp;moved.
+            </p>
+            <p class="section-border continued-border"></p>
+            <p class="continued">Continued on Page 7, Column 2</p>
+          </div>
+        </section>
+        <section class="bone-conduction">
+          <h3 class="title">A Link Between Hearing Voices and Hearing<br/> Your Own Voice</h3>
+          <p class="section-border"></p>
+          <h3 class="byline">By VERONIQUE GREENWOOD</h3>
+          <h4 class="credits">Special to The New York Times</h4>
+          <div class="text-wrapper">
+            <div class="text">
+              <p class="vertical-text">commercially&nbsp;available</p>
+              An experiment with bone-conduc&shy;tion head&shy;phones suggests a way for
+              neuroscien&shy;tists to better under&shy;stand some&nbsp;hallucinations.
+              <br/>
+              &emsp;It is the rare person who likes hearing their own voice on a recor&shy;ding.
+              It sounds fake, somehow — like it belongs to someone&nbsp;else.
+              <br/>
+              &emsp;For neuro&shy;scien&shy;tists, that quality of other&shy;ness is more than a
+              curiosity. Many mys&shy;teries remain about the origins of hal&shy;lucina&shy;tions,
+              but one hypo&shy;thesis sug&shy;gests that when people hear voices, they are hearing
+              their own thoughts dis&shy;guised as another
+              person’s by a quirk of&nbsp;the&nbsp;brain.
+              <br/>
+              &emsp;Scien&shy;tists would like to under&shy;stand what parts of the brain allow us
+              to re&shy;cognize our&shy;selves speaking, but studying this using recor&shy;dings of
+              people’s own voices has proved tricky. When we talk, we not only hear our voice
+              with our ears, but on some level we feel it as the sound
+              vib&shy;rations travel through the bones of&nbsp;the&nbsp;skull.
+              <br/>
+              &emsp;A study published Wednesday in the journal
+              Royal Society Open Science attem&shy;pted a&nbsp;workaround.
+            </div>
+            <p class="section-border continued-border"></p>
+            <p class="continued">Continued on Page 13, Column 4</p>
+          </div>
+        </section>
+      </article>
+      <article class="modern-love">
+        <img src="img/modern-love-left.png" alt="Modern love" class="old-photo left">
+        <img src="img/modern-love-right.png" alt="Modern love" class="old-photo right">
+        <section class="first-story">
+          <h3 class="title">Don’t Call Me by My Real Name</h3>
+          <p class="section-border"></p>
+          <h3 class="byline">By SAMAIYA MUSHTAG</h3>
+          <h4 class="credits">Special to The New York Times</h4>
+          <div class="text-wrapper">
+            <p class="text">
+              As a sex worker, I had to set boun&shy;daries with clients that
+              I some&shy;times couldn’t abide&nbsp;by&nbsp;myself.
+              <br/>
+              &emsp;Clients love to ask sex workers, “What’s your real name?”
+              It’s a power move. “I know you contain mul&shy;titudes” is what they mean,
+              “and I have the right to see.” They paid,&nbsp;after&nbsp;all.
+              <br/>
+              &emsp;The clients who asked this ques&shy;tion of me were usually the type
+              who had tricked them&shy;selves into believ&shy;ing that we had a personal
+              relation&shy;ship — a roman&shy;tic one, or a sexual one they wouldn’t
+              have to pay for had we met under dif&shy;ferent cir&shy;cums&shy;tances.
+              <br/>
+              &emsp;When clients pried, I liked turning the ques&shy;tion back&nbsp;on&nbsp;them.
+              <br/>
+              &emsp;“John is my real name!” he might say, laug&shy;hing at the idea that he,
+              unlike me, would have any&shy;thing to hide. “John is my real name too,”
+              I might say with&nbsp;a&nbsp;wink.
+            </p>
+            <p class="section-border continued-border"></p>
+            <p class="continued">Continued on Page 16, Column 1</p>
+          </div>
+        </section>
+        <section class="second-story">
+          <h3 class="title">I’ll Get By With a Little Help From My Herd</h3>
+          <p class="section-border"></p>
+          <h3 class="byline">By BETSY CORNWELL</h3>
+          <h4 class="credits">Special to The New York Times</h4>
+          <div class="text-wrapper">
+            <p class="text">
+              A single mother, alone with a toddler in a foreign country,
+              finds com&shy;munity during Covid — and then creates one&nbsp;for&nbsp;others.
+              <br/>
+              &emsp;My ex was a bad hus&shy;band but a good horse trainer. When we met, he had just
+              bought a pony for 50 euros that the seller swore was un&shy;break&shy;able.
+              Three months later, he sold it for 10 times that
+              price as a child’s Christ&shy;mas&nbsp;present.
+              <br/>
+              &emsp;He was kinder to horses than he was to me. He had bet&shy;ter luck
+              train&shy;ing them, too. His attempts to break me were easy to brush off at
+              first, but they grew more force&shy;ful after our son was born. On our baby’s
+              first birth&shy;day, he told me that if I didn’t obey him, he would have
+              me depor&shy;ted back to America and keep our son&nbsp;in&nbsp;Ireland.
+              <br/>
+              &emsp;I reacted the way any threat&shy;ened animal mother would:
+              I took my baby&nbsp;and&nbsp;ran.
+              <br/>
+              &emsp;After a brief brush with home&shy;les&shy;sness,
+              we moved to a rural cot&shy;tage I could barely afford even with multiple jobs.
+            </p>
+            <p class="section-border continued-border"></p>
+            <p class="continued">Continued on Page 16, Column 3</p>
+          </div>
+        </section>
+      </article>
+    </main>
   </body>
 </html>
