@@ -1,1 +1,263 @@
-/* TODO */
+@font-face {
+  font-family: 'Font1';
+  font-style: normal;
+  src: url('fonts/font1.ttf');
+}
+
+@font-face {
+  font-family: 'Font2';
+  src: url('fonts/font2.ttf');
+}
+
+@font-face {
+  font-family: 'Font3';
+  src: url('fonts/font3.ttf');
+}
+
+@font-face {
+  font-family: 'Font4';
+  src: url('fonts/font4.ttf');
+}
+
+
+@font-face {
+  font-family: 'Font5';
+  src: url('fonts/font5.ttf');
+}
+
+
+.quote {
+  text-align: center;
+  text-decoration: underline;
+
+  font-family: Font4, sans-serif;
+}
+
+.image-blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+}
+
+.img-titles {
+  font-family: Font4, serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.titles {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'header header header'
+    'underheader underheader underheader'
+    'article1 article1 article1'
+    'article3 article2 article2'
+    'anekdot article2 article2';
+  grid-template-columns: 7fr 5fr 5fr;
+  grid-template-rows: auto;
+
+  max-width: 1600px;
+  padding-right: 10px;
+
+}
+
+.header {
+  grid-area: header;
+
+  margin: 0;
+
+  color: #000000ff;
+  font-family: Font2, serif;
+  font-size: 80px;
+  text-align: center;
+}
+
+.underheaders {
+  grid-area: underheader;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+  'under-header-left under-header-right';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.under-headers {
+  font-family: Font3, cursive;
+}
+
+#under-header-left {
+  grid-area: under-header-left;
+}
+
+#under-header-right {
+  grid-area: under-header-right;
+  text-align: right;
+}
+
+#article-1 {
+  display: grid;
+  align-content: stretch;
+  grid-area: article1;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'title1 title1'
+    'text1 img1';
+  grid-template-columns: 5fr 4fr;
+  grid-template-rows: auto;
+
+  font-family: Font1, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#img-1 {
+  width: 100%;
+}
+
+#image-block1 {
+  grid-area: img1;
+}
+
+#title-1 {
+  grid-area: title1;
+}
+
+#text-1 {
+  grid-area: text1;
+  column-count: 4;
+  font-size: 22px;
+  text-align: justify;
+}
+
+.texts {
+  hyphens: auto;
+}
+
+.texts::first-letter {
+  color: #ff0000;
+  font-size: 30px;
+}
+
+#article-2 {
+  display: grid;
+  grid-area: article2;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'title2'
+    'text2';
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  font-family: Font5, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+#title-2 {
+  grid-area: title2;
+}
+
+#text-2 {
+  grid-area: text2;
+
+  column-count: 3;
+  font-size: 18px;
+  text-align: justify;
+}
+
+#article-3 {
+  display: grid;
+  grid-area: article3;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'title3'
+    'text3';
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  margin: -5px;
+  padding: 5px;
+
+  border: 2px solid black;
+
+  font-family: Font4, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+#img-3 {
+  width: 100%;
+}
+
+#title-3 {
+  grid-area: title3;
+}
+
+#text-3 {
+  grid-area: text3;
+
+  column-count: 2;
+  font-size: 20px;
+  text-align: justify;
+}
+
+#anekdot {
+  display: grid;
+  grid-area: anekdot;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'title4 text4'
+    'title4 img4';
+  grid-template-columns: 1fr 10fr;
+  grid-template-rows: auto;
+
+  margin: -5px;
+  padding: 5px;
+
+  border: 2px solid black;
+
+  font-family: Font2, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+#img-4 {
+  width: 100%;
+}
+
+#image-block4 {
+  grid-area: img4;
+}
+
+#title-4 {
+  grid-area: title4;
+}
+
+#text-4 {
+  grid-area: text4;
+  column-count: 1;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.vertical {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 38px;
+  font-family: Font4, serif;
+}
