@@ -28,7 +28,7 @@
   font-family: 'English Rose', serif;
 }
 
-.background-zone {
+.background-newspaper-zone {
   margin-top: 0.5rem;
 }
 
@@ -67,7 +67,7 @@
   grid-template-columns: 1fr 1fr 1fr 2fr;
 }
 
-.header-style {
+.header-newspaper-style {
   width: 100%;
   height: 70px;
   display: flex;
@@ -106,35 +106,74 @@
   display: none;
 }
 .input-option {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
 }
 
 .input-item:checked + .label-item {
   border: 2px black dashed;
 }
 
-#antonella-script-x-bold-font:checked ~ .background-zone > .read-zone {
+#antonella-script-x-bold-font:checked ~ .background-newspaper-zone > .read-zone {
   font-family: 'Antonella script X', serif;
 }
-#barocco-initial-font:checked ~ .background-zone > .read-zone {
+#barocco-initial-font:checked ~ .background-newspaper-zone > .read-zone {
   font-family: 'Barocco Initial', serif;
 }
-#debut-deco-normal-font:checked ~ .background-zone > .read-zone {
+#debut-deco-normal-font:checked ~ .background-newspaper-zone > .read-zone {
   font-family: 'Debut Deco', serif;
 }
-#english-rose-font:checked ~ .background-zone > .read-zone {
+#english-rose-font:checked ~ .background-newspaper-zone > .read-zone {
   font-family: 'English Rose', serif;
 }
 
-#black-text:checked ~ .background-zone {
+#black-text:checked ~ .background-newspaper-zone {
   background-color: #e3d0b5;
   background-image: url('img/light-paper.jpeg');
   color: #222222;
   border-color: #2a2a2a;
 }
-#white-text:checked ~ .background-zone {
+#white-text:checked ~ .background-newspaper-zone {
   background-color: #1b2c48;
   background-image: url('img/black-paper.jpg');
   color: antiquewhite;
   border-color: navajowhite;
+}
+
+#normal-size-text:checked ~ .background-newspaper-zon > .read-zone .font10 {
+  font-size: 10px;
+}
+#normal-size-text:checked ~ .background-newspaper-zon > .read-zone .font20 {
+  font-size: 20px;
+}
+#normal-size-text:checked ~ .background-newspaper-zon > .read-zone .font30 {
+  font-size: 30px;
+}
+#normal-size-text:checked ~ .background-newspaper-zon > .read-zone .font40 {
+  font-size: 40px;
+}
+#small-size-text:checked ~ .background-newspaper-zone > .read-zone .font10 {
+  font-size: 8px;
+}
+#small-size-text:checked ~ .background-newspaper-zone > .read-zone .font20 {
+  font-size: 16px;
+}
+#small-size-text:checked ~ .background-newspaper-zone > .read-zone .font30 {
+  font-size: 24px;
+}
+#small-size-text:checked ~ .background-newspaper-zone > .read-zone .font40 {
+  font-size: 32px;
+}
+
+.old-photo-holder {
+  display: flex;
+  width: 300px;
+  height: 350px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  margin: 1em 1em 1em 0;
+}
+
+.cherchill-photo {
+  background-image: url(img/cherchill.jpeg);
 }
